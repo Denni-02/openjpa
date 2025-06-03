@@ -1,0 +1,2546 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] OpenJPA Parent POM                                                 [pom]
+[INFO] OpenJPA Utilities Library                                          [jar]
+[INFO] OpenJPA Kernel                                                     [jar]
+[INFO] OpenJPA JDBC                                                       [jar]
+[INFO] OpenJPA Persistence                                                [jar]
+[INFO] OpenJPA Persistence JDBC                                           [jar]
+[INFO] OpenJPA Persistence Locking Tests                                  [jar]
+[INFO] OpenJPA tools                                                      [pom]
+[INFO] OpenJPA Maven Plugin                                      [maven-plugin]
+[INFO] OpenJPA XML Store                                                  [jar]
+[INFO] OpenJPA Slice                                                      [jar]
+[INFO] OpenJPA JEST                                                       [jar]
+[INFO] OpenJPA Kubernetes                                                 [jar]
+[INFO] OpenJPA Aggregate Jar                                           [bundle]
+[INFO] OpenJPA Aggregate Jar with Dependencies                            [jar]
+[INFO] OpenJPA Project Docs and Assemblies                                [pom]
+[INFO] OpenJPA Examples                                                   [pom]
+[INFO] OpenJPA Examples - Simple                                          [jar]
+[INFO] OpenJPA Examples - image-gallery                                   [jar]
+[INFO] OpenJPA Examples - OpenBooks                                       [jar]
+[INFO] OpenJPA Integration Tests                                          [pom]
+[INFO] OpenJPA Integration Tests - Daytrader                              [jar]
+[INFO] OpenJPA Integration Tests - Examples                               [pom]
+[INFO] OpenJPA Integration Tests - SLF4JLogFactory                        [jar]
+[INFO] OpenJPA Integration Tests - JPA TCK                                [pom]
+[INFO] OpenJPA Integration Tests - Bean Validation                        [jar]
+[INFO] OpenJPA Integration Tests - JMX Platform MBeans                    [jar]
+[INFO] OpenJPA Fetching Statistic Tool                                    [jar]
+[INFO] OpenJPA Fetching Statistic Tool -- WAS Bundle                      [jar]
+[INFO] OpenJPA Features                                                   [pom]
+[INFO] OpenJPA JUnit 5                                                    [jar]
+[INFO] 
+[INFO] -----------------< org.apache.openjpa:openjpa-parent >------------------
+[INFO] Building OpenJPA Parent POM 4.1.1-SNAPSHOT                        [1/31]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-parent ---
+[INFO] Deleting /home/denni/isw2/openjpa/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-parent ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:45 PM at timestamp: 1748979945497
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-parent ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-parent ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-parent ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-parent ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1832 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-parent ---
+[INFO] Installing /home/denni/isw2/openjpa/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-parent/4.1.1-SNAPSHOT/openjpa-parent-4.1.1-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------------< org.apache.openjpa:openjpa-lib >-------------------
+[INFO] Building OpenJPA Utilities Library 4.1.1-SNAPSHOT                 [2/31]
+[INFO]   from openjpa-lib/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-lib ---
+[INFO] Deleting /home/denni/isw2/openjpa/openjpa-lib/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-lib ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:45 PM at timestamp: 1748979950764
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-lib' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-lib
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-lib ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-lib ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-lib ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-lib ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-lib ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-lib ---
+[INFO] Copying 9 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-lib ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 226 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-lib/src/main/java/org/apache/openjpa/lib/meta/ClassMetaDataIterator.java: Some input files use or override a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-lib/src/main/java/org/apache/openjpa/lib/meta/ClassMetaDataIterator.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-lib/src/main/java/org/apache/openjpa/lib/conf/ConfigurationImpl.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-lib/src/main/java/org/apache/openjpa/lib/conf/ConfigurationImpl.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- antrun:3.1.0:run (set git version) @ openjpa-lib ---
+[INFO] Executing tasks
+[WARNING]      [echo] Determining if there are uncommitted changes...
+[ERROR]      [exec] Result: 1
+[WARNING]      [echo] Getting the 'GIT' revision value
+[WARNING]      [echo] Revision: 3c2bae9M
+[WARNING]      [echo] Getting the 'PCEnhancer' revision value
+[WARNING]      [echo] openjpa.enhancer.revision=f413b63M
+[WARNING]      [echo] OpenJPA version: 4.1.1-SNAPSHOT
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-lib ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-lib ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-lib/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-lib ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-lib ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-lib ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-lib/target/openjpa-lib-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-lib ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-lib/target/openjpa-lib-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-lib ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 245 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-lib ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-lib/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-lib/4.1.1-SNAPSHOT/openjpa-lib-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-lib/target/openjpa-lib-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-lib/4.1.1-SNAPSHOT/openjpa-lib-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-lib/target/openjpa-lib-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-lib/4.1.1-SNAPSHOT/openjpa-lib-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -----------------< org.apache.openjpa:openjpa-kernel >------------------
+[INFO] Building OpenJPA Kernel 4.1.1-SNAPSHOT                            [3/31]
+[INFO]   from openjpa-kernel/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-kernel ---
+[INFO] Deleting /home/denni/isw2/openjpa/openjpa-kernel/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-kernel ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:45 PM at timestamp: 1748979957433
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-kernel' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-kernel
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-kernel ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-kernel ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-kernel ---
+[INFO] 
+[INFO] --- javacc:2.6:jjtree-javacc (jjtree-javacc-jpql) @ openjpa-kernel ---
+Java Compiler Compiler Version 5.0 (Tree Builder)
+(type "jjtree" with no arguments for help)
+Warning: Bad option value in "-JDK_VERSION=11" will be ignored.
+Reading from file /home/denni/isw2/openjpa/openjpa-kernel/src/main/jjtree/org/apache/openjpa/kernel/jpql/JPQL.jjt . . .
+File "Node.java" does not exist.  Will create one.
+File "JPQLTreeConstants.java" does not exist.  Will create one.
+File "JJTJPQLState.java" does not exist.  Will create one.
+Annotated grammar generated successfully in /home/denni/isw2/openjpa/openjpa-kernel/target/javacc-1748979957517/node/JPQL.jj
+Java Compiler Compiler Version 5.0 (Parser Generator)
+(type "javacc" with no arguments for help)
+Warning: Bad option value in "-JDK_VERSION=11" will be ignored.
+Reading from file /home/denni/isw2/openjpa/openjpa-kernel/target/javacc-1748979957517/node/JPQL.jj . . .
+File "TokenMgrError.java" does not exist.  Will create one.
+File "ParseException.java" does not exist.  Will create one.
+File "Token.java" does not exist.  Will create one.
+File "JavaCharStream.java" does not exist.  Will create one.
+Parser generated with 0 errors and 2 warnings.
+[INFO] Processed 1 grammar
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-kernel ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-kernel ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Filtering appended resource: META-INF/NOTICE.vm
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-kernel ---
+[INFO] Copying 15 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-kernel ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 531 source files with javac [debug release 11] to target/classes
+[WARNING] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/ee/WLSManagedRuntime.java:[42,68] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/ee/WLSManagedRuntime.java:[43,70] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/ee/WLSManagedRuntime.java:[51,47] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/ee/WLSManagedRuntime.java:[52,62] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/ee/InvocationManagedRuntime.java:[70,41] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class<?> for a varargs call
+  cast to java.lang.Class<?>[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/ee/InvocationManagedRuntime.java:[72,58] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[INFO] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/kernel/AbstractStoreQuery.java: Some input files use or override a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/kernel/AbstractStoreQuery.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/kernel/AbstractBrokerFactory.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-kernel/src/main/java/org/apache/openjpa/kernel/AbstractBrokerFactory.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- antrun:3.1.0:run (generate-standard-sco-proxies) @ openjpa-kernel ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-kernel ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 11] to target/test-classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-kernel ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-kernel/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-kernel ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 11] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-kernel ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.5.2/surefire-junit4-3.5.2.pom
+Progress (1): 1.4/3.3 kBProgress (1): 2.8/3.3 kBProgress (1): 3.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.5.2/surefire-junit4-3.5.2.pom (3.3 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.2/surefire-providers-3.5.2.pom
+Progress (1): 1.4/2.6 kBProgress (1): 2.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.2/surefire-providers-3.5.2.pom (2.6 kB at 97 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.2/common-java5-3.5.2.pom
+Progress (1): 1.4/2.8 kBProgress (1): 2.8/2.8 kBProgress (1): 2.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.2/common-java5-3.5.2.pom (2.8 kB at 102 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.5.2/common-junit4-3.5.2.pom
+Progress (1): 1.4/3.5 kBProgress (1): 2.8/3.5 kBProgress (1): 3.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.5.2/common-junit4-3.5.2.pom (3.5 kB at 138 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.5.2/common-junit3-3.5.2.pom
+Progress (1): 1.4/2.7 kBProgress (1): 2.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.5.2/common-junit3-3.5.2.pom (2.7 kB at 109 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.5.2/surefire-junit4-3.5.2.jar
+Progress (1): 1.4/18 kBProgress (1): 2.8/18 kBProgress (1): 4.1/18 kBProgress (1): 5.5/18 kBProgress (1): 6.9/18 kBProgress (1): 8.3/18 kBProgress (1): 9.7/18 kBProgress (1): 11/18 kB Progress (1): 12/18 kBProgress (1): 14/18 kBProgress (1): 15/18 kBProgress (1): 17/18 kBProgress (1): 18 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/3.5.2/surefire-junit4-3.5.2.jar (18 kB at 510 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.2/common-java5-3.5.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.5.2/common-junit4-3.5.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.5.2/common-junit3-3.5.2.jar
+Progress (1): 1.4/18 kBProgress (1): 2.8/18 kBProgress (1): 4.1/18 kBProgress (1): 5.5/18 kBProgress (1): 6.9/18 kBProgress (1): 8.3/18 kBProgress (1): 9.7/18 kBProgress (1): 11/18 kB Progress (1): 12/18 kBProgress (1): 14/18 kBProgress (1): 15/18 kBProgress (1): 17/18 kBProgress (1): 18 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.2/common-java5-3.5.2.jar (18 kB at 439 kB/s)
+Progress (1): 1.4/12 kBProgress (1): 2.8/12 kBProgress (1): 4.1/12 kBProgress (1): 5.5/12 kBProgress (1): 6.9/12 kBProgress (1): 8.3/12 kBProgress (1): 9.7/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/3.5.2/common-junit3-3.5.2.jar (12 kB at 145 kB/s)
+Progress (1): 1.4/26 kBProgress (1): 2.8/26 kBProgress (1): 4.1/26 kBProgress (1): 5.5/26 kBProgress (1): 6.9/26 kBProgress (1): 8.3/26 kBProgress (1): 9.7/26 kBProgress (1): 11/26 kB Progress (1): 12/26 kBProgress (1): 14/26 kBProgress (1): 15/26 kBProgress (1): 17/26 kBProgress (1): 18/26 kBProgress (1): 19/26 kBProgress (1): 21/26 kBProgress (1): 22/26 kBProgress (1): 23/26 kBProgress (1): 25/26 kBProgress (1): 26 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/3.5.2/common-junit4-3.5.2.jar (26 kB at 281 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running sanity.SanityTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in sanity.SanityTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-kernel ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-kernel/target/openjpa-kernel-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-kernel ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-kernel/target/openjpa-kernel-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-kernel ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 551 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-kernel ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kernel/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-kernel/4.1.1-SNAPSHOT/openjpa-kernel-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kernel/target/openjpa-kernel-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-kernel/4.1.1-SNAPSHOT/openjpa-kernel-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kernel/target/openjpa-kernel-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-kernel/4.1.1-SNAPSHOT/openjpa-kernel-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------------< org.apache.openjpa:openjpa-jdbc >-------------------
+[INFO] Building OpenJPA JDBC 4.1.1-SNAPSHOT                              [4/31]
+[INFO]   from openjpa-jdbc/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-jdbc ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-jdbc ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748979967656
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-jdbc' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-jdbc
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-jdbc ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-jdbc ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-jdbc ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-jdbc ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-jdbc ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-jdbc ---
+[INFO] Copying 15 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-jdbc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 374 source files with javac [debug release 11] to target/classes
+[WARNING] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/kernel/exps/JDBCExpressionFactory.java:[415,28] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to org.apache.openjpa.jdbc.kernel.exps.Val for a varargs call
+  cast to org.apache.openjpa.jdbc.kernel.exps.Val[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/sql/DB2Dictionary.java:[594,50] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class<?> for a varargs call
+  cast to java.lang.Class<?>[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/sql/DB2Dictionary.java:[598,37] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class<?> for a varargs call
+  cast to java.lang.Class<?>[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/sql/DB2Dictionary.java:[600,37] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class<?> for a varargs call
+  cast to java.lang.Class<?>[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/sql/DB2Dictionary.java:[602,37] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class<?> for a varargs call
+  cast to java.lang.Class<?>[] for a non-varargs call and to suppress this warning
+[INFO] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/meta/MappingRepository.java: Some input files use or override a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/meta/MappingRepository.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/schema/ForeignKey.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-jdbc/src/main/java/org/apache/openjpa/jdbc/schema/ForeignKey.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-jdbc ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-jdbc ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-jdbc/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-jdbc ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-jdbc ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-jdbc ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-jdbc/target/openjpa-jdbc-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-jdbc ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-jdbc/target/openjpa-jdbc-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-jdbc ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 392 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-jdbc ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jdbc/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-jdbc/4.1.1-SNAPSHOT/openjpa-jdbc-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jdbc/target/openjpa-jdbc-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-jdbc/4.1.1-SNAPSHOT/openjpa-jdbc-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jdbc/target/openjpa-jdbc-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-jdbc/4.1.1-SNAPSHOT/openjpa-jdbc-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ---------------< org.apache.openjpa:openjpa-persistence >---------------
+[INFO] Building OpenJPA Persistence 4.1.1-SNAPSHOT                       [5/31]
+[INFO]   from openjpa-persistence/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-persistence ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-persistence ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748979974030
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-persistence' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-persistence
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-persistence ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-persistence ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-persistence ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-persistence ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-persistence ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Filtering appended resource: META-INF/LICENSE.vm
+[INFO] Filtering appended resource: META-INF/NOTICE.vm
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-persistence ---
+[INFO] Copying 21 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-persistence ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 235 source files with javac [debug release 11] to target/classes
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[79,58] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[80,68] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[83,65] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[84,75] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[87,72] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[90,68] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[92,19] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[95,64] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AnnotationPersistenceXMLMetaDataParser.java:[96,74] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class for a varargs call
+  cast to java.lang.Class[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/HintValueConverter.java:[61,76] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Class<?> for a varargs call
+  cast to java.lang.Class<?>[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/HintValueConverter.java:[61,95] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/criteria/CriteriaBuilderImpl.java:[1010,42] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to jakarta.persistence.metamodel.Attribute<?,?> for a varargs call
+  cast to jakarta.persistence.metamodel.Attribute<?,?>[] for a non-varargs call and to suppress this warning
+[WARNING] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/criteria/CriteriaBuilderImpl.java:[1020,47] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to jakarta.persistence.metamodel.Attribute<?,?> for a varargs call
+  cast to jakarta.persistence.metamodel.Attribute<?,?>[] for a non-varargs call and to suppress this warning
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/OpenJPAQuerySPI.java: Some input files use or override a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/OpenJPAQuerySPI.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AbstractQuery.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence/src/main/java/org/apache/openjpa/persistence/AbstractQuery.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-persistence ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-persistence ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-persistence/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-persistence ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-persistence ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-persistence ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-persistence/target/openjpa-persistence-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-persistence ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-persistence/target/openjpa-persistence-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-persistence ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 248 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-persistence ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence/4.1.1-SNAPSHOT/openjpa-persistence-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence/target/openjpa-persistence-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence/4.1.1-SNAPSHOT/openjpa-persistence-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence/target/openjpa-persistence-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence/4.1.1-SNAPSHOT/openjpa-persistence-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------< org.apache.openjpa:openjpa-persistence-jdbc >-------------
+[INFO] Building OpenJPA Persistence JDBC 4.1.1-SNAPSHOT                  [6/31]
+[INFO]   from openjpa-persistence-jdbc/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-persistence-jdbc ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-persistence-jdbc ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748979979432
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-persistence-jdbc' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-persistence-jdbc
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-persistence-jdbc ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-persistence-jdbc ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-persistence-jdbc ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-persistence-jdbc ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-persistence-jdbc ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Filtering appended resource: META-INF/NOTICE.vm
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-persistence-jdbc ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-persistence-jdbc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 65 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence-jdbc/src/main/java/org/apache/openjpa/persistence/jdbc/AnnotationPersistenceMappingSerializer.java: Some input files use or override a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence-jdbc/src/main/java/org/apache/openjpa/persistence/jdbc/AnnotationPersistenceMappingSerializer.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence-jdbc/src/main/java/org/apache/openjpa/persistence/jdbc/AnnotationPersistenceMappingParser.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-persistence-jdbc/src/main/java/org/apache/openjpa/persistence/jdbc/AnnotationPersistenceMappingParser.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-persistence-jdbc ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-persistence-jdbc ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-persistence-jdbc/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-persistence-jdbc ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- antrun:3.1.0:run (enhance) @ openjpa-persistence-jdbc ---
+[INFO] Skipping Antrun execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-persistence-jdbc ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-persistence-jdbc ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-persistence-jdbc/target/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-persistence-jdbc ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-persistence-jdbc/target/openjpa-persistence-jdbc-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-persistence-jdbc ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 69 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-persistence-jdbc ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-jdbc/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence-jdbc/4.1.1-SNAPSHOT/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-jdbc/target/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence-jdbc/4.1.1-SNAPSHOT/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-jdbc/target/openjpa-persistence-jdbc-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence-jdbc/4.1.1-SNAPSHOT/openjpa-persistence-jdbc-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -----------< org.apache.openjpa:openjpa-persistence-locking >-----------
+[INFO] Building OpenJPA Persistence Locking Tests 4.1.1-SNAPSHOT         [7/31]
+[INFO]   from openjpa-persistence-locking/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-persistence-locking ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-persistence-locking ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748979980277
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-persistence-locking' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-persistence-locking
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-persistence-locking ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-persistence-locking ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-persistence-locking ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-persistence-locking ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-persistence-locking ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-persistence-locking ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-persistence-locking/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-persistence-locking ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-persistence-locking ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-persistence-locking ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-persistence-locking/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-persistence-locking ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- dependency:3.8.1:unpack (unpack) @ openjpa-persistence-locking ---
+[INFO] Configured Artifact: org.apache.openjpa:openjpa-persistence-jdbc:4.1.1-SNAPSHOT:test-jar
+[INFO] 
+[INFO] --- antrun:3.1.0:run (default) @ openjpa-persistence-locking ---
+[INFO] Skipping Antrun execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-persistence-locking ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-persistence-locking ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-persistence-locking/target/openjpa-persistence-locking-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-persistence-locking ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-persistence-locking/target/openjpa-persistence-locking-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-persistence-locking ---
+[WARNING] No resources included.
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-persistence-locking ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-locking/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence-locking/4.1.1-SNAPSHOT/openjpa-persistence-locking-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-locking/target/openjpa-persistence-locking-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence-locking/4.1.1-SNAPSHOT/openjpa-persistence-locking-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-locking/target/openjpa-persistence-locking-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-persistence-locking/4.1.1-SNAPSHOT/openjpa-persistence-locking-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------------< org.apache.openjpa:openjpa-tools >------------------
+[INFO] Building OpenJPA tools 4.1.1-SNAPSHOT                             [8/31]
+[INFO]   from openjpa-tools/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-tools ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-tools ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748979980624
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-tools' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-tools
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-tools ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-tools ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-tools ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-tools ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-tools ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-tools ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-tools ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 41 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-tools ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-tools/4.1.1-SNAPSHOT/openjpa-tools-4.1.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------< org.apache.openjpa:openjpa-maven-plugin >---------------
+[INFO] Building OpenJPA Maven Plugin 4.1.1-SNAPSHOT                      [9/31]
+[INFO]   from openjpa-tools/openjpa-maven-plugin/pom.xml
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-maven-plugin ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-maven-plugin ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748979980877
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-maven-plugin ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-maven-plugin ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-maven-plugin ---
+[INFO] 
+[INFO] --- plugin:3.15.1:helpmojo (help-goal) @ openjpa-maven-plugin ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-maven-plugin ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-maven-plugin:maven-plugin:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-maven-plugin ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-maven-plugin ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-maven-plugin ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/src/main/java/org/apache/openjpa/tools/maven/AbstractOpenJpaMojo.java: /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/src/main/java/org/apache/openjpa/tools/maven/AbstractOpenJpaMojo.java uses or overrides a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/src/main/java/org/apache/openjpa/tools/maven/AbstractOpenJpaMojo.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- plugin:3.15.1:descriptor (default-descriptor) @ openjpa-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-annotations mojo extractor found 5 mojo descriptors.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] ant mojo extractor found 0 mojo descriptor.
+[INFO] bsh mojo extractor found 0 mojo descriptor.
+[INFO] 
+[INFO] --- plugin:3.15.1:descriptor (mojo-descriptor) @ openjpa-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-annotations mojo extractor found 5 mojo descriptors.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] ant mojo extractor found 0 mojo descriptor.
+[INFO] bsh mojo extractor found 0 mojo descriptor.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-maven-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-maven-plugin ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-maven-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-maven-plugin ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-maven-plugin ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/openjpa-maven-plugin-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- plugin:3.15.1:addPluginArtifactMetadata (default-addPluginArtifactMetadata) @ openjpa-maven-plugin ---
+[INFO] This Mojo is not used in Maven version 3.9.0 and above
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-maven-plugin ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/openjpa-maven-plugin-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- invoker:3.9.0:install (integration-test) @ openjpa-maven-plugin ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/openjpa-maven-plugin-4.1.1-SNAPSHOT.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-maven-plugin/4.1.1-SNAPSHOT/openjpa-maven-plugin-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/openjpa-maven-plugin-4.1.1-SNAPSHOT-tests.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-maven-plugin/4.1.1-SNAPSHOT/openjpa-maven-plugin-4.1.1-SNAPSHOT-tests.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-maven-plugin/4.1.1-SNAPSHOT/openjpa-maven-plugin-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-tools/4.1.1-SNAPSHOT/openjpa-tools-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-parent/4.1.1-SNAPSHOT/openjpa-parent-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/apache/34/apache-34.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/apache/34/apache-34.pom
+[INFO] Installing /home/denni/.m2/repository/org/codehaus/plexus/plexus-utils/3.1.0/plexus-utils-3.1.0.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/codehaus/plexus/plexus-utils/3.1.0/plexus-utils-3.1.0.jar
+[INFO] Installing /home/denni/.m2/repository/org/codehaus/plexus/plexus-utils/3.1.0/plexus-utils-3.1.0.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/codehaus/plexus/plexus-utils/3.1.0/plexus-utils-3.1.0.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kernel/target/openjpa-kernel-4.1.1-SNAPSHOT.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-kernel/4.1.1-SNAPSHOT/openjpa-kernel-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kernel/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-kernel/4.1.1-SNAPSHOT/openjpa-kernel-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-lib/target/openjpa-lib-4.1.1-SNAPSHOT.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-lib/4.1.1-SNAPSHOT/openjpa-lib-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-lib/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-lib/4.1.1-SNAPSHOT/openjpa-lib-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/.m2/repository/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.jar
+[INFO] Installing /home/denni/.m2/repository/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.pom
+[INFO] Installing /home/denni/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar
+[INFO] Installing /home/denni/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/commons/commons-pool2/2.12.1/commons-pool2-2.12.1.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/commons/commons-pool2/2.12.1/commons-pool2-2.12.1.jar
+[INFO] Installing /home/denni/.m2/repository/org/apache/commons/commons-pool2/2.12.1/commons-pool2-2.12.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/commons/commons-pool2/2.12.1/commons-pool2-2.12.1.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/xbean/xbean-asm9-shaded/4.26/xbean-asm9-shaded-4.26.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/xbean/xbean-asm9-shaded/4.26/xbean-asm9-shaded-4.26.jar
+[INFO] Installing /home/denni/.m2/repository/org/apache/xbean/xbean-asm9-shaded/4.26/xbean-asm9-shaded-4.26.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/xbean/xbean-asm9-shaded/4.26/xbean-asm9-shaded-4.26.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jdbc/target/openjpa-jdbc-4.1.1-SNAPSHOT.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-jdbc/4.1.1-SNAPSHOT/openjpa-jdbc-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jdbc/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-jdbc/4.1.1-SNAPSHOT/openjpa-jdbc-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence/target/openjpa-persistence-4.1.1-SNAPSHOT.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-persistence/4.1.1-SNAPSHOT/openjpa-persistence-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-persistence/4.1.1-SNAPSHOT/openjpa-persistence-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar
+[INFO] Installing /home/denni/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.pom
+[INFO] Installing /home/denni/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar
+[INFO] Installing /home/denni/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-jdbc/target/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-persistence-jdbc/4.1.1-SNAPSHOT/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-persistence-jdbc/pom.xml to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/openjpa/openjpa-persistence-jdbc/4.1.1-SNAPSHOT/openjpa-persistence-jdbc-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar
+[INFO] Installing /home/denni/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/bval/org.apache.bval.bundle/3.0.2/org.apache.bval.bundle-3.0.2.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/bval/org.apache.bval.bundle/3.0.2/org.apache.bval.bundle-3.0.2.jar
+[INFO] Installing /home/denni/.m2/repository/org/apache/bval/org.apache.bval.bundle/3.0.2/org.apache.bval.bundle-3.0.2.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/bval/org.apache.bval.bundle/3.0.2/org.apache.bval.bundle-3.0.2.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/log4j/log4j-core/2.23.1/log4j-core-2.23.1.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/log4j/log4j-core/2.23.1/log4j-core-2.23.1.jar
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/log4j/log4j-core/2.23.1/log4j-core-2.23.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/log4j/log4j-core/2.23.1/log4j-core-2.23.1.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.pom
+[INFO] Installing /home/denni/.m2/repository/org/sonatype/forge/forge-parent/10/forge-parent-10.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/sonatype/forge/forge-parent/10/forge-parent-10.pom
+[INFO] Installing /home/denni/.m2/repository/org/codehaus/plexus/plexus/4.0/plexus-4.0.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/codehaus/plexus/plexus/4.0/plexus-4.0.pom
+[INFO] Installing /home/denni/.m2/repository/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
+[INFO] Installing /home/denni/.m2/repository/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/apache/33/apache-33.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/apache/33/apache-33.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/commons/commons-parent/79/commons-parent-79.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/commons/commons-parent/79/commons-parent-79.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/apache/18/apache-18.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/apache/18/apache-18.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/geronimo/genesis/genesis/2.3/genesis-2.3.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/geronimo/genesis/genesis/2.3/genesis-2.3.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/geronimo/genesis/genesis-default-flava/2.3/genesis-default-flava-2.3.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/geronimo/genesis/genesis-default-flava/2.3/genesis-default-flava-2.3.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/geronimo/genesis/genesis-java8-flava/2.3/genesis-java8-flava-2.3.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/geronimo/genesis/genesis-java8-flava/2.3/genesis-java8-flava-2.3.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/xbean/xbean/4.26/xbean-4.26.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/xbean/xbean/4.26/xbean-4.26.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/apache/32/apache-32.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/apache/32/apache-32.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/bval/bval-parent/3.0.2/bval-parent-3.0.2.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/bval/bval-parent/3.0.2/bval-parent-3.0.2.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/apache/31/apache-31.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/apache/31/apache-31.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/log4j/log4j-bom/2.23.1/log4j-bom-2.23.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/log4j/log4j-bom/2.23.1/log4j-bom-2.23.1.pom
+[INFO] Installing /home/denni/.m2/repository/org/apache/logging/log4j/log4j/2.23.1/log4j-2.23.1.pom to /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/local-repo/org/apache/logging/log4j/log4j/2.23.1/log4j-2.23.1.pom
+[INFO] 
+[INFO] --- invoker:3.9.0:run (integration-test) @ openjpa-maven-plugin ---
+[INFO] Building: enhanceIncludesExcludes/pom.xml
+[INFO] run post-build script verify.groovy
+[INFO]           enhanceIncludesExcludes/pom.xml .................. SUCCESS (6.021 s)
+[INFO] Building: sqlActionRefresh/pom.xml
+[INFO]           sqlActionRefresh/pom.xml ......................... SUCCESS (5.792 s)
+[INFO] Building: sqlActionDropSchema/pom.xml
+[INFO]           sqlActionDropSchema/pom.xml ...................... SUCCESS (4.689 s)
+[INFO] Building: default_settings/pom.xml
+[INFO]           default_settings/pom.xml ......................... SUCCESS (4.078 s)
+[INFO] Building: dependingArtifact/pom.xml
+[INFO]           dependingArtifact/pom.xml ........................ SUCCESS (4.323 s)
+[INFO] Building: nonDefaultPersistenceXml/pom.xml
+[INFO]           nonDefaultPersistenceXml/pom.xml ................. SUCCESS (5.922 s)
+[INFO] Building: nonRecursiveRelations/pom.xml
+[INFO]           nonRecursiveRelations/pom.xml .................... SUCCESS (2.986 s)
+[INFO] -------------------------------------------------
+[INFO] Build Summary:
+[INFO]   Passed: 7, Failed: 0, Errors: 0, Skipped: 0
+[INFO] -------------------------------------------------
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-maven-plugin ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 38 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-maven-plugin ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-maven-plugin/4.1.1-SNAPSHOT/openjpa-maven-plugin-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/openjpa-maven-plugin-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-maven-plugin/4.1.1-SNAPSHOT/openjpa-maven-plugin-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-maven-plugin/target/openjpa-maven-plugin-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-maven-plugin/4.1.1-SNAPSHOT/openjpa-maven-plugin-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ----------------< org.apache.openjpa:openjpa-xmlstore >-----------------
+[INFO] Building OpenJPA XML Store 4.1.1-SNAPSHOT                        [10/31]
+[INFO]   from openjpa-xmlstore/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-xmlstore ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-xmlstore ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748980016948
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-xmlstore' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-xmlstore
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-xmlstore ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-xmlstore ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-xmlstore ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-xmlstore ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-xmlstore ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-xmlstore ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-xmlstore/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-xmlstore ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-xmlstore/src/main/java/org/apache/openjpa/xmlstore/XMLFileHandler.java: /home/denni/isw2/openjpa/openjpa-xmlstore/src/main/java/org/apache/openjpa/xmlstore/XMLFileHandler.java uses or overrides a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-xmlstore/src/main/java/org/apache/openjpa/xmlstore/XMLFileHandler.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-xmlstore/src/main/java/org/apache/openjpa/xmlstore/ObjectData.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-xmlstore/src/main/java/org/apache/openjpa/xmlstore/ObjectData.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-xmlstore ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-xmlstore ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-xmlstore/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-xmlstore ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- dependency:3.8.1:unpack (unpack) @ openjpa-xmlstore ---
+[INFO] Configured Artifact: org.apache.openjpa:openjpa-persistence-jdbc:4.1.1-SNAPSHOT:test-jar
+[INFO] 
+[INFO] --- openjpa:4.1.1-SNAPSHOT:test-enhance (enhancer) @ openjpa-xmlstore ---
+[INFO] Skip sql execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-xmlstore ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-xmlstore ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-xmlstore/target/openjpa-xmlstore-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-xmlstore ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-xmlstore/target/openjpa-xmlstore-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-xmlstore ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 6 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-xmlstore ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-xmlstore/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-xmlstore/4.1.1-SNAPSHOT/openjpa-xmlstore-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-xmlstore/target/openjpa-xmlstore-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-xmlstore/4.1.1-SNAPSHOT/openjpa-xmlstore-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-xmlstore/target/openjpa-xmlstore-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-xmlstore/4.1.1-SNAPSHOT/openjpa-xmlstore-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------------< org.apache.openjpa:openjpa-slice >------------------
+[INFO] Building OpenJPA Slice 4.1.1-SNAPSHOT                            [11/31]
+[INFO]   from openjpa-slice/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-slice ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-slice ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748980017320
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-slice' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-slice
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-slice ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-slice ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-slice ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-slice ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-slice ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-slice ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-slice ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 32 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-slice/src/main/java/org/apache/openjpa/slice/jdbc/DistributedPreparedStatement.java: Some input files use or override a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-slice/src/main/java/org/apache/openjpa/slice/jdbc/DistributedPreparedStatement.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-slice/src/main/java/org/apache/openjpa/slice/jdbc/SliceStoreManager.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-slice/src/main/java/org/apache/openjpa/slice/jdbc/SliceStoreManager.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-slice ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-slice ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-slice/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-slice ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- antrun:3.1.0:run (default) @ openjpa-slice ---
+[INFO] Skipping Antrun execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-slice ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-slice ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-slice/target/openjpa-slice-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-slice ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-slice/target/openjpa-slice-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-slice ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 38 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-slice ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-slice/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-slice/4.1.1-SNAPSHOT/openjpa-slice-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-slice/target/openjpa-slice-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-slice/4.1.1-SNAPSHOT/openjpa-slice-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-slice/target/openjpa-slice-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-slice/4.1.1-SNAPSHOT/openjpa-slice-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------------< org.apache.openjpa:openjpa-jest >-------------------
+[INFO] Building OpenJPA JEST 4.1.1-SNAPSHOT                             [12/31]
+[INFO]   from openjpa-jest/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-jest ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-jest ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748980018237
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-jest' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-jest
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-jest ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-jest ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-jest ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-jest ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-jest ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-jest ---
+[INFO] Copying 19 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-jest ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 25 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-jest/src/main/java/org/apache/openjpa/persistence/jest/JESTContext.java: /home/denni/isw2/openjpa/openjpa-jest/src/main/java/org/apache/openjpa/persistence/jest/JESTContext.java uses or overrides a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-jest/src/main/java/org/apache/openjpa/persistence/jest/JESTContext.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-jest/src/main/java/org/apache/openjpa/persistence/jest/PrototypeFactory.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-jest/src/main/java/org/apache/openjpa/persistence/jest/PrototypeFactory.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-jest ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-jest ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-jest/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-jest ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- antrun:3.1.0:run (default) @ openjpa-jest ---
+[INFO] Skipping Antrun execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-jest ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-jest ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-jest/target/openjpa-jest-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-jest ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-jest/target/openjpa-jest-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-jest ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 34 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-jest ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jest/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-jest/4.1.1-SNAPSHOT/openjpa-jest-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jest/target/openjpa-jest-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-jest/4.1.1-SNAPSHOT/openjpa-jest-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-jest/target/openjpa-jest-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-jest/4.1.1-SNAPSHOT/openjpa-jest-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ---------------< org.apache.openjpa:openjpa-kubernetes >----------------
+[INFO] Building OpenJPA Kubernetes 4.1.1-SNAPSHOT                       [13/31]
+[INFO]   from openjpa-kubernetes/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-kubernetes ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-kubernetes ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748980019110
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-kubernetes' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-kubernetes
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-kubernetes ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-kubernetes ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-kubernetes ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-kubernetes ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-kubernetes ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-kubernetes ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-kubernetes ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-kubernetes ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-kubernetes ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-kubernetes/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-kubernetes ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-kubernetes ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-kubernetes ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-kubernetes/target/openjpa-kubernetes-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-kubernetes ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-kubernetes/target/openjpa-kubernetes-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-kubernetes ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 2 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-kubernetes ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kubernetes/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-kubernetes/4.1.1-SNAPSHOT/openjpa-kubernetes-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kubernetes/target/openjpa-kubernetes-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-kubernetes/4.1.1-SNAPSHOT/openjpa-kubernetes-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-kubernetes/target/openjpa-kubernetes-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-kubernetes/4.1.1-SNAPSHOT/openjpa-kubernetes-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ---------------------< org.apache.openjpa:openjpa >---------------------
+[INFO] Building OpenJPA Aggregate Jar 4.1.1-SNAPSHOT                    [14/31]
+[INFO]   from openjpa/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:46 PM at timestamp: 1748980019897
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Filtering appended resource: META-INF/LICENSE.vm
+[INFO] Filtering appended resource: META-INF/NOTICE.vm
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- bundle:5.1.9:bundle (default-bundle) @ openjpa ---
+[WARNING] Bundle org.apache.openjpa:openjpa:bundle:4.1.1-SNAPSHOT : Unused Import-Package instructions: [javax.activation.xa*, jakarta.xml.bind.*] 
+[INFO] Building bundle: /home/denni/isw2/openjpa/openjpa/target/openjpa-4.1.1-SNAPSHOT.jar
+[INFO] Writing manifest: /home/denni/isw2/openjpa/openjpa/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- shade:3.6.0:shade (shade-all) @ openjpa ---
+[INFO] Including org.apache.openjpa:openjpa-lib:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-kernel:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-jdbc:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-persistence:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-persistence-jdbc:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-xmlstore:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-slice:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Excluding org.apache.xbean:xbean-asm9-shaded:jar:4.26 from the shaded jar.
+[INFO] Excluding jakarta.jms:jakarta.jms-api:jar:3.1.0 from the shaded jar.
+[INFO] Excluding jakarta.transaction:jakarta.transaction-api:jar:2.0.1 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-pool2:jar:2.12.1 from the shaded jar.
+[INFO] Excluding javax.xml.bind:jaxb-api:jar:2.2.1 from the shaded jar.
+[INFO] Excluding javax.xml.stream:stax-api:jar:1.0-2 from the shaded jar.
+[INFO] Excluding com.sun.xml.bind:jaxb-impl:jar:2.2.1 from the shaded jar.
+[INFO] Excluding jakarta.persistence:jakarta.persistence-api:jar:3.1.0 from the shaded jar.
+[INFO] Excluding jakarta.annotation:jakarta.annotation-api:jar:2.1.1 from the shaded jar.
+[INFO] Dependency-reduced POM written at: /home/denni/isw2/openjpa/openjpa/dependency-reduced-pom.xml
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-slice-4.1.1-SNAPSHOT.jar define 50 overlapping classes and resources: 
+[WARNING]   - org.apache.openjpa.slice.DistributedBroker
+[WARNING]   - org.apache.openjpa.slice.DistributedBrokerFactory
+[WARNING]   - org.apache.openjpa.slice.DistributedBrokerImpl
+[WARNING]   - org.apache.openjpa.slice.DistributedConfiguration
+[WARNING]   - org.apache.openjpa.slice.DistributedQueryImpl
+[WARNING]   - org.apache.openjpa.slice.DistributedStoreManager
+[WARNING]   - org.apache.openjpa.slice.DistributionPolicy
+[WARNING]   - org.apache.openjpa.slice.DistributionPolicy$Default
+[WARNING]   - org.apache.openjpa.slice.FinderTargetPolicy
+[WARNING]   - org.apache.openjpa.slice.ProductDerivation
+[WARNING]   - 40 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-jdbc-4.1.1-SNAPSHOT.jar define 540 overlapping classes and resources: 
+[WARNING]   - org.apache.openjpa.jdbc.ant.MappingToolTask
+[WARNING]   - org.apache.openjpa.jdbc.ant.MappingToolTask$Action
+[WARNING]   - org.apache.openjpa.jdbc.ant.MappingToolTask$SchemaAction
+[WARNING]   - org.apache.openjpa.jdbc.ant.ReverseMappingToolTask
+[WARNING]   - org.apache.openjpa.jdbc.ant.ReverseMappingToolTask$AccessType
+[WARNING]   - org.apache.openjpa.jdbc.ant.ReverseMappingToolTask$Level
+[WARNING]   - org.apache.openjpa.jdbc.ant.SchemaToolTask
+[WARNING]   - org.apache.openjpa.jdbc.ant.SchemaToolTask$Action
+[WARNING]   - org.apache.openjpa.jdbc.conf.FetchModeValue
+[WARNING]   - org.apache.openjpa.jdbc.conf.JDBCConfiguration
+[WARNING]   - 530 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-jdbc-4.1.1-SNAPSHOT.jar, openjpa-kernel-4.1.1-SNAPSHOT.jar, openjpa-lib-4.1.1-SNAPSHOT.jar, openjpa-persistence-4.1.1-SNAPSHOT.jar, openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar, openjpa-slice-4.1.1-SNAPSHOT.jar, openjpa-xmlstore-4.1.1-SNAPSHOT.jar define 4 overlapping resources: 
+[WARNING]   - META-INF/DEPENDENCIES
+[WARNING]   - META-INF/LICENSE
+[WARNING]   - META-INF/MANIFEST.MF
+[WARNING]   - META-INF/NOTICE
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-kernel-4.1.1-SNAPSHOT.jar define 707 overlapping classes and resources: 
+[WARNING]   - org.apache.openjpa.abstractstore.AbstractStoreBrokerFactory
+[WARNING]   - org.apache.openjpa.abstractstore.AbstractStoreManager
+[WARNING]   - org.apache.openjpa.ant.ApplicationIdToolTask
+[WARNING]   - org.apache.openjpa.ant.MetaDataToolTask
+[WARNING]   - org.apache.openjpa.ant.MetaDataToolTask$Action
+[WARNING]   - org.apache.openjpa.ant.PCEnhancerTask
+[WARNING]   - org.apache.openjpa.audit.AuditLogger
+[WARNING]   - org.apache.openjpa.audit.Auditable
+[WARNING]   - org.apache.openjpa.audit.AuditableOperation
+[WARNING]   - org.apache.openjpa.audit.Auditor
+[WARNING]   - 697 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar define 76 overlapping class and resource: 
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser$1
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer$1
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer$ColType
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer$MappingSerializationComparator
+[WARNING]   - org.apache.openjpa.persistence.jdbc.ClassCriteria
+[WARNING]   - org.apache.openjpa.persistence.jdbc.Columns
+[WARNING]   - org.apache.openjpa.persistence.jdbc.ContainerTable
+[WARNING]   - org.apache.openjpa.persistence.jdbc.DataStoreIdColumn
+[WARNING]   - 66 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-persistence-4.1.1-SNAPSHOT.jar define 441 overlapping classes and resources: 
+[WARNING]   - org.apache.openjpa.persistence.AbstractQuery
+[WARNING]   - org.apache.openjpa.persistence.AbstractQuery$1
+[WARNING]   - org.apache.openjpa.persistence.AnnotationBuilder
+[WARNING]   - org.apache.openjpa.persistence.AnnotationBuilder$AnnotationEntry
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$1
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$FetchAttributeImpl
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$FetchGroupImpl
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$MethodComparator
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$MethodKey
+[WARNING]   - 431 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-xmlstore-4.1.1-SNAPSHOT.jar define 7 overlapping classes: 
+[WARNING]   - org.apache.openjpa.xmlstore.ObjectData
+[WARNING]   - org.apache.openjpa.xmlstore.XMLConfiguration
+[WARNING]   - org.apache.openjpa.xmlstore.XMLFileHandler
+[WARNING]   - org.apache.openjpa.xmlstore.XMLFileHandler$ObjectDataHandler
+[WARNING]   - org.apache.openjpa.xmlstore.XMLFileHandler$XMLEncoder
+[WARNING]   - org.apache.openjpa.xmlstore.XMLStore
+[WARNING]   - org.apache.openjpa.xmlstore.XMLStoreManager
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-lib-4.1.1-SNAPSHOT.jar define 402 overlapping classes and resources: 
+[WARNING]   - org.apache.openjpa.lib.ant.AbstractTask
+[WARNING]   - org.apache.openjpa.lib.conf.AbstractProductDerivation
+[WARNING]   - org.apache.openjpa.lib.conf.BooleanValue
+[WARNING]   - org.apache.openjpa.lib.conf.BootstrapException
+[WARNING]   - org.apache.openjpa.lib.conf.ClassListValue
+[WARNING]   - org.apache.openjpa.lib.conf.Configurable
+[WARNING]   - org.apache.openjpa.lib.conf.Configuration
+[WARNING]   - org.apache.openjpa.lib.conf.ConfigurationImpl
+[WARNING]   - org.apache.openjpa.lib.conf.ConfigurationProvider
+[WARNING]   - org.apache.openjpa.lib.conf.Configurations
+[WARNING]   - 392 more...
+[WARNING] maven-shade-plugin has detected that some files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the file is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See https://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/denni/isw2/openjpa/openjpa/target/openjpa-4.1.1-SNAPSHOT.jar with /home/denni/isw2/openjpa/openjpa/target/openjpa-4.1.1-SNAPSHOT-shaded.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 2 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa/dependency-reduced-pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa/4.1.1-SNAPSHOT/openjpa-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa/target/openjpa-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa/4.1.1-SNAPSHOT/openjpa-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- bundle:5.1.9:install (default-install) @ openjpa ---
+[INFO] Installing org/apache/openjpa/openjpa/4.1.1-SNAPSHOT/openjpa-4.1.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[INFO] -------------------< org.apache.openjpa:openjpa-all >-------------------
+[INFO] Building OpenJPA Aggregate Jar with Dependencies 4.1.1-SNAPSHOT  [15/31]
+[INFO]   from openjpa-all/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-all ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-all ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980024352
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-all' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-all
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-all ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-all ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-all ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-all ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-all ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] Filtering appended resource: META-INF/LICENSE.vm
+[INFO] Filtering appended resource: META-INF/NOTICE.vm
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-all ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-all/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-all ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-all ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-all ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-all/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-all ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-all ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-all ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-all/target/openjpa-all-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-all ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-all/target/openjpa-all-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- shade:3.6.0:shade (default) @ openjpa-all ---
+[INFO] Including org.apache.openjpa:openjpa:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-lib:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.xbean:xbean-asm9-shaded:jar:4.26 in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-kernel:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including jakarta.jms:jakarta.jms-api:jar:3.1.0 in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-jdbc:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-persistence:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including jakarta.persistence:jakarta.persistence-api:jar:3.1.0 in the shaded jar.
+[INFO] Including jakarta.annotation:jakarta.annotation-api:jar:2.1.1 in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-persistence-jdbc:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-xmlstore:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including org.apache.openjpa:openjpa-slice:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Including commons-logging:commons-logging:jar:1.2 in the shaded jar.
+[INFO] Including org.apache.commons:commons-dbcp2:jar:2.13.0 in the shaded jar.
+[INFO] Including org.apache.commons:commons-pool2:jar:2.12.1 in the shaded jar.
+[INFO] Including jakarta.transaction:jakarta.transaction-api:jar:2.0.1 in the shaded jar.
+[INFO] Including jakarta.validation:jakarta.validation-api:jar:3.0.2 in the shaded jar.
+[INFO] Including org.apache.bval:org.apache.bval.bundle:jar:3.0.2 in the shaded jar.
+[INFO] Dependency-reduced POM written at: /home/denni/isw2/openjpa/openjpa-all/dependency-reduced-pom.xml
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-slice-4.1.1-SNAPSHOT.jar define 52 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-slice/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-slice/pom.xml
+[WARNING]   - org.apache.openjpa.slice.DistributedBroker
+[WARNING]   - org.apache.openjpa.slice.DistributedBrokerFactory
+[WARNING]   - org.apache.openjpa.slice.DistributedBrokerImpl
+[WARNING]   - org.apache.openjpa.slice.DistributedConfiguration
+[WARNING]   - org.apache.openjpa.slice.DistributedQueryImpl
+[WARNING]   - org.apache.openjpa.slice.DistributedStoreManager
+[WARNING]   - org.apache.openjpa.slice.DistributionPolicy
+[WARNING]   - org.apache.openjpa.slice.DistributionPolicy$Default
+[WARNING]   - 42 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-jdbc-4.1.1-SNAPSHOT.jar define 542 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-jdbc/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-jdbc/pom.xml
+[WARNING]   - org.apache.openjpa.jdbc.ant.MappingToolTask
+[WARNING]   - org.apache.openjpa.jdbc.ant.MappingToolTask$Action
+[WARNING]   - org.apache.openjpa.jdbc.ant.MappingToolTask$SchemaAction
+[WARNING]   - org.apache.openjpa.jdbc.ant.ReverseMappingToolTask
+[WARNING]   - org.apache.openjpa.jdbc.ant.ReverseMappingToolTask$AccessType
+[WARNING]   - org.apache.openjpa.jdbc.ant.ReverseMappingToolTask$Level
+[WARNING]   - org.apache.openjpa.jdbc.ant.SchemaToolTask
+[WARNING]   - org.apache.openjpa.jdbc.ant.SchemaToolTask$Action
+[WARNING]   - 532 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-kernel-4.1.1-SNAPSHOT.jar define 709 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-kernel/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-kernel/pom.xml
+[WARNING]   - org.apache.openjpa.abstractstore.AbstractStoreBrokerFactory
+[WARNING]   - org.apache.openjpa.abstractstore.AbstractStoreManager
+[WARNING]   - org.apache.openjpa.ant.ApplicationIdToolTask
+[WARNING]   - org.apache.openjpa.ant.MetaDataToolTask
+[WARNING]   - org.apache.openjpa.ant.MetaDataToolTask$Action
+[WARNING]   - org.apache.openjpa.ant.PCEnhancerTask
+[WARNING]   - org.apache.openjpa.audit.AuditLogger
+[WARNING]   - org.apache.openjpa.audit.Auditable
+[WARNING]   - 699 more...
+[WARNING] commons-dbcp2-2.13.0.jar, commons-pool2-2.12.1.jar define 1 overlapping classes: 
+[WARNING]   - META-INF.versions.9.module-info
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar define 78 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-persistence-jdbc/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-persistence-jdbc/pom.xml
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser$1
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer$1
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer$ColType
+[WARNING]   - org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingSerializer$MappingSerializationComparator
+[WARNING]   - org.apache.openjpa.persistence.jdbc.ClassCriteria
+[WARNING]   - org.apache.openjpa.persistence.jdbc.Columns
+[WARNING]   - 68 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-persistence-4.1.1-SNAPSHOT.jar define 443 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-persistence/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-persistence/pom.xml
+[WARNING]   - org.apache.openjpa.persistence.AbstractQuery
+[WARNING]   - org.apache.openjpa.persistence.AbstractQuery$1
+[WARNING]   - org.apache.openjpa.persistence.AnnotationBuilder
+[WARNING]   - org.apache.openjpa.persistence.AnnotationBuilder$AnnotationEntry
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$1
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$FetchAttributeImpl
+[WARNING]   - org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser$FetchGroupImpl
+[WARNING]   - 433 more...
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-xmlstore-4.1.1-SNAPSHOT.jar define 9 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-xmlstore/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-xmlstore/pom.xml
+[WARNING]   - org.apache.openjpa.xmlstore.ObjectData
+[WARNING]   - org.apache.openjpa.xmlstore.XMLConfiguration
+[WARNING]   - org.apache.openjpa.xmlstore.XMLFileHandler
+[WARNING]   - org.apache.openjpa.xmlstore.XMLFileHandler$ObjectDataHandler
+[WARNING]   - org.apache.openjpa.xmlstore.XMLFileHandler$XMLEncoder
+[WARNING]   - org.apache.openjpa.xmlstore.XMLStore
+[WARNING]   - org.apache.openjpa.xmlstore.XMLStoreManager
+[WARNING] commons-dbcp2-2.13.0.jar, commons-logging-1.2.jar, commons-pool2-2.12.1.jar, jakarta.annotation-api-2.1.1.jar, jakarta.jms-api-3.1.0.jar, jakarta.persistence-api-3.1.0.jar, jakarta.transaction-api-2.0.1.jar, jakarta.validation-api-3.0.2.jar, openjpa-4.1.1-SNAPSHOT.jar, openjpa-all-4.1.1-SNAPSHOT.jar, openjpa-jdbc-4.1.1-SNAPSHOT.jar, openjpa-kernel-4.1.1-SNAPSHOT.jar, openjpa-lib-4.1.1-SNAPSHOT.jar, openjpa-persistence-4.1.1-SNAPSHOT.jar, openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar, openjpa-slice-4.1.1-SNAPSHOT.jar, openjpa-xmlstore-4.1.1-SNAPSHOT.jar, org.apache.bval.bundle-3.0.2.jar, xbean-asm9-shaded-4.26.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/MANIFEST.MF
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-lib-4.1.1-SNAPSHOT.jar define 405 overlapping classes and resources: 
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-lib/pom.properties
+[WARNING]   - META-INF/maven/org.apache.openjpa/openjpa-lib/pom.xml
+[WARNING]   - META-INF/org.apache.openjpa.revision.properties
+[WARNING]   - org.apache.openjpa.lib.ant.AbstractTask
+[WARNING]   - org.apache.openjpa.lib.conf.AbstractProductDerivation
+[WARNING]   - org.apache.openjpa.lib.conf.BooleanValue
+[WARNING]   - org.apache.openjpa.lib.conf.BootstrapException
+[WARNING]   - org.apache.openjpa.lib.conf.ClassListValue
+[WARNING]   - org.apache.openjpa.lib.conf.Configurable
+[WARNING]   - org.apache.openjpa.lib.conf.Configuration
+[WARNING]   - 395 more...
+[WARNING] commons-dbcp2-2.13.0.jar, commons-logging-1.2.jar, commons-pool2-2.12.1.jar define 2 overlapping resources: 
+[WARNING]   - META-INF/LICENSE.txt
+[WARNING]   - META-INF/NOTICE.txt
+[WARNING] jakarta.annotation-api-2.1.1.jar, jakarta.jms-api-3.1.0.jar, jakarta.persistence-api-3.1.0.jar, jakarta.transaction-api-2.0.1.jar define 2 overlapping resources: 
+[WARNING]   - META-INF/LICENSE.md
+[WARNING]   - META-INF/NOTICE.md
+[WARNING] openjpa-4.1.1-SNAPSHOT.jar, openjpa-all-4.1.1-SNAPSHOT.jar, openjpa-jdbc-4.1.1-SNAPSHOT.jar, openjpa-kernel-4.1.1-SNAPSHOT.jar, openjpa-lib-4.1.1-SNAPSHOT.jar, openjpa-persistence-4.1.1-SNAPSHOT.jar, openjpa-persistence-jdbc-4.1.1-SNAPSHOT.jar, openjpa-slice-4.1.1-SNAPSHOT.jar, openjpa-xmlstore-4.1.1-SNAPSHOT.jar, org.apache.bval.bundle-3.0.2.jar, xbean-asm9-shaded-4.26.jar define 3 overlapping resources: 
+[WARNING]   - META-INF/DEPENDENCIES
+[WARNING]   - META-INF/LICENSE
+[WARNING]   - META-INF/NOTICE
+[WARNING] maven-shade-plugin has detected that some files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the file is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See https://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/denni/isw2/openjpa/openjpa-all/target/openjpa-all-4.1.1-SNAPSHOT.jar with /home/denni/isw2/openjpa/openjpa-all/target/openjpa-all-4.1.1-SNAPSHOT-shaded.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-all ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 2 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-all ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-all/dependency-reduced-pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-all/4.1.1-SNAPSHOT/openjpa-all-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-all/target/openjpa-all-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-all/4.1.1-SNAPSHOT/openjpa-all-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-all/target/openjpa-all-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-all/4.1.1-SNAPSHOT/openjpa-all-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -----------------< org.apache.openjpa:apache-openjpa >------------------
+[INFO] Building OpenJPA Project Docs and Assemblies 4.1.1-SNAPSHOT      [16/31]
+[INFO]   from openjpa-project/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ apache-openjpa ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ apache-openjpa ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980025403
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-project' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-project
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ apache-openjpa ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ apache-openjpa ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ apache-openjpa ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ apache-openjpa ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ apache-openjpa ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ apache-openjpa ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- assembly:3.7.1:single (bin) @ apache-openjpa ---
+[INFO] Reading assembly descriptor: assembly.xml
+[INFO] Reading assembly descriptor: source-assembly.xml
+[INFO] Reading assembly descriptor: bin-assembly.xml
+[WARNING] Cannot include project artifact: org.apache.openjpa:apache-openjpa:pom:4.1.1-SNAPSHOT; it doesn't have an associated file or directory.
+[WARNING] Cannot include project artifact: org.apache.openjpa:apache-openjpa:pom:4.1.1-SNAPSHOT; it doesn't have an associated file or directory.
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'org.apache.geronimo.specs:geronimo-jta_1.1_spec'
+o  'org.apache.geronimo.specs:geronimo-jpa_2.2_spec'
+o  'org.apache.geronimo.specs:geronimo-jms_1.1_spec'
+o  'org.apache.geronimo.specs:geronimo-validation_1.0_spec'
+
+[INFO] Building zip: /home/denni/isw2/openjpa/openjpa-project/target/site/downloads/apache-openjpa-4.1.1-SNAPSHOT-binary.zip
+[INFO] Building zip: /home/denni/isw2/openjpa/openjpa-project/target/site/downloads/apache-openjpa-4.1.1-SNAPSHOT-source.zip
+[WARNING] Cannot include project artifact: org.apache.openjpa:apache-openjpa:pom:4.1.1-SNAPSHOT; it doesn't have an associated file or directory.
+[WARNING] Cannot include project artifact: org.apache.openjpa:apache-openjpa:pom:4.1.1-SNAPSHOT; it doesn't have an associated file or directory.
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'org.apache.geronimo.specs:geronimo-jta_1.1_spec'
+o  'org.apache.geronimo.specs:geronimo-jpa_2.2_spec'
+o  'org.apache.geronimo.specs:geronimo-jms_1.1_spec'
+o  'org.apache.geronimo.specs:geronimo-validation_1.0_spec'
+
+[INFO] Building zip: /home/denni/isw2/openjpa/openjpa-project/target/site/downloads/apache-openjpa-4.1.1-SNAPSHOT-binary-nodocs.zip
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ apache-openjpa ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 41 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ apache-openjpa ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-project/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/apache-openjpa/4.1.1-SNAPSHOT/apache-openjpa-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-project/target/site/downloads/apache-openjpa-4.1.1-SNAPSHOT-binary.zip to /home/denni/.m2/repository/org/apache/openjpa/apache-openjpa/4.1.1-SNAPSHOT/apache-openjpa-4.1.1-SNAPSHOT-binary.zip
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-project/target/site/downloads/apache-openjpa-4.1.1-SNAPSHOT-source.zip to /home/denni/.m2/repository/org/apache/openjpa/apache-openjpa/4.1.1-SNAPSHOT/apache-openjpa-4.1.1-SNAPSHOT-source.zip
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-project/target/site/downloads/apache-openjpa-4.1.1-SNAPSHOT-binary-nodocs.zip to /home/denni/.m2/repository/org/apache/openjpa/apache-openjpa/4.1.1-SNAPSHOT/apache-openjpa-4.1.1-SNAPSHOT-binary-nodocs.zip
+[INFO] 
+[INFO] ----------------< org.apache.openjpa:openjpa-examples >-----------------
+[INFO] Building OpenJPA Examples 4.1.1-SNAPSHOT                         [17/31]
+[INFO]   from openjpa-examples/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-examples ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-examples ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980027713
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-examples' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-examples
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-examples ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-examples ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-examples ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-examples ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-examples ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-examples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-examples ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 154 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-examples ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/4.1.1-SNAPSHOT/openjpa-examples-4.1.1-SNAPSHOT.pom
+[INFO] 
+[INFO] -------------< org.apache.openjpa.openjpa-examples:simple >-------------
+[INFO] Building OpenJPA Examples - Simple 4.1.1-SNAPSHOT                [18/31]
+[INFO]   from openjpa-examples/simple/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ simple ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ simple ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980028100
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-examples/simple' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-examples/simple
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ simple ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ simple ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ simple ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ simple ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ simple ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ simple ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ simple ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 12 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-examples/simple/src/main/java/embeddables/Main.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-examples/simple/src/main/java/embeddables/Main.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ simple ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ simple ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-examples/simple/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ simple ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ simple ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ simple ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-examples/simple/target/simple-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ simple ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-examples/simple/target/simple-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ simple ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 22 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ simple ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/simple/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/simple/4.1.1-SNAPSHOT/simple-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/simple/target/simple-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/simple/4.1.1-SNAPSHOT/simple-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/simple/target/simple-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/simple/4.1.1-SNAPSHOT/simple-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ---------< org.apache.openjpa.openjpa-examples:image-gallery >----------
+[INFO] Building OpenJPA Examples - image-gallery 4.1.1-SNAPSHOT         [19/31]
+[INFO]   from openjpa-examples/image-gallery/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ image-gallery ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ image-gallery ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980028427
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-examples/image-gallery' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-examples/image-gallery
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ image-gallery ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ image-gallery ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ image-gallery ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ image-gallery ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ image-gallery ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ image-gallery ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-examples/image-gallery/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ image-gallery ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ image-gallery ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ image-gallery ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-examples/image-gallery/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ image-gallery ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- openjpa:4.1.1-SNAPSHOT:test-enhance (enhancer) @ image-gallery ---
+[INFO] Skip sql execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ image-gallery ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ image-gallery ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-examples/image-gallery/target/image-gallery-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ image-gallery ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-examples/image-gallery/target/image-gallery-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ image-gallery ---
+[WARNING] No resources included.
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ image-gallery ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/image-gallery/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/image-gallery/4.1.1-SNAPSHOT/image-gallery-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/image-gallery/target/image-gallery-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/image-gallery/4.1.1-SNAPSHOT/image-gallery-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/image-gallery/target/image-gallery-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/image-gallery/4.1.1-SNAPSHOT/image-gallery-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -----------< org.apache.openjpa.openjpa-examples:openbooks >------------
+[INFO] Building OpenJPA Examples - OpenBooks 4.1.1-SNAPSHOT             [20/31]
+[INFO]   from openjpa-examples/openbooks/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openbooks ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openbooks ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980028572
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-examples/openbooks' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-examples/openbooks
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openbooks ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openbooks ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openbooks ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openbooks ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openbooks ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openbooks ---
+[INFO] Copying 50 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- antrun:3.1.0:run (genmodel) @ openbooks ---
+[INFO] Executing tasks
+[WARNING]      [echo] Running OpenBooks genmodel
+[WARNING]      [echo] 
+[WARNING]      [echo] 			Builds OpenBooks demo application.
+[WARNING]      [echo] 			OpenJPA Library: /home/denni/.m2/repository/org/apache/openjpa/openjpa-all/4.1.1-SNAPSHOT
+[WARNING]      [echo] 			Build mode     : jse
+[WARNING]      [echo] 			Deploy Location: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks
+[WARNING]      [echo] 		
+[INFO]     [mkdir] Created dir: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java
+[INFO]     [javac] Compiling 8 source files to /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/classes
+[WARNING]     [javac] Note: Starting OpenJPA Annotation Processor for Metamodel Generation
+[WARNING]     [javac] Note: Annotation jakarta.annotation.Generated not found in the classpath. It will not be added to generated static metamodels.
+[WARNING]     [javac] Note: Generating canonical metamodel source code "file:///home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java/openbook/domain/Author_.java"
+[WARNING]     [javac] Note: Generating canonical metamodel source code "file:///home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java/openbook/domain/Book_.java"
+[WARNING]     [javac] Note: Generating canonical metamodel source code "file:///home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java/openbook/domain/Customer_.java"
+[WARNING]     [javac] Note: Generating canonical metamodel source code "file:///home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java/openbook/domain/Inventory_.java"
+[WARNING]     [javac] Note: Generating canonical metamodel source code "file:///home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java/openbook/domain/LineItem_.java"
+[WARNING]     [javac] Note: Generating canonical metamodel source code "file:///home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-metamodel/java/openbook/domain/PurchaseOrder_.java"
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openbooks ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 67 source files with javac [debug release 11] to target/classes
+[INFO] /home/denni/isw2/openjpa/openjpa-examples/openbooks/src/main/java/jpa/tools/swing/ScrollingTextPane.java: /home/denni/isw2/openjpa/openjpa-examples/openbooks/src/main/java/jpa/tools/swing/ScrollingTextPane.java uses or overrides a deprecated API.
+[INFO] /home/denni/isw2/openjpa/openjpa-examples/openbooks/src/main/java/jpa/tools/swing/ScrollingTextPane.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/denni/isw2/openjpa/openjpa-examples/openbooks/src/main/java/jpa/tools/swing/EntityTableView.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/denni/isw2/openjpa/openjpa-examples/openbooks/src/main/java/jpa/tools/swing/EntityTableView.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- antrun:3.1.0:run (enhance) @ openbooks ---
+[INFO] Executing tasks
+[WARNING]      [echo] Running OpenBooks Enhance
+[WARNING]      [echo] 
+[WARNING]      [echo] 			Builds OpenBooks demo application.
+[WARNING]      [echo] 			OpenJPA Library: /home/denni/.m2/repository/org/apache/openjpa/openjpa-all/4.1.1-SNAPSHOT
+[WARNING]      [echo] 			Build mode     : jse
+[WARNING]      [echo] 			Deploy Location: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks
+[WARNING]      [echo] 		
+[INFO]      [java] 153  OpenBooks  INFO   [main] openjpa.Tool - Enhancer running on type "openbook.domain.PurchaseOrder".
+[INFO]      [java] 269  OpenBooks  INFO   [main] openjpa.Tool - Enhancer running on type "openbook.domain.LineItem".
+[INFO]      [java] 278  OpenBooks  INFO   [main] openjpa.Tool - Enhancer running on type "openbook.domain.Inventory".
+[INFO]      [java] 285  OpenBooks  INFO   [main] openjpa.Tool - Enhancer running on type "openbook.domain.Author".
+[INFO]      [java] 289  OpenBooks  INFO   [main] openjpa.Tool - Enhancer running on type "openbook.domain.Customer".
+[INFO]      [java] 294  OpenBooks  INFO   [main] openjpa.Tool - Enhancer running on type "openbook.domain.Book".
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openbooks ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openbooks ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-examples/openbooks/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openbooks ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openbooks ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- antrun:3.1.0:run (generate-source) @ openbooks ---
+[INFO] Executing tasks
+[WARNING]      [echo] Running OpenBooks Generate Source
+[WARNING]      [echo] 
+[WARNING]      [echo] 			Builds OpenBooks demo application.
+[WARNING]      [echo] 			OpenJPA Library: /home/denni/.m2/repository/org/apache/openjpa/openjpa-all/4.1.1-SNAPSHOT
+[WARNING]      [echo] 			Build mode     : jse
+[WARNING]      [echo] 			Deploy Location: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks
+[WARNING]      [echo] 		
+[WARNING]     [javac] /home/denni/isw2/openjpa/openjpa-examples/openbooks/build.xml:214: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+[INFO]     [mkdir] Created dir: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-html
+[INFO]      [copy] Copying 1 file to /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/generated-html
+[INFO]      [copy] Copying 5 files to /home/denni/isw2/openjpa/openjpa-examples/openbooks/target
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openbooks ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- assembly:3.7.1:single (bin) @ openbooks ---
+[INFO] Reading assembly descriptor: assembly.xml
+[INFO] Building zip: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks-4.1.1-SNAPSHOT-binary.zip
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openbooks ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openbooks ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 76 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openbooks ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/openbooks/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/openbooks/4.1.1-SNAPSHOT/openbooks-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/openbooks/4.1.1-SNAPSHOT/openbooks-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks-4.1.1-SNAPSHOT-binary.zip to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/openbooks/4.1.1-SNAPSHOT/openbooks-4.1.1-SNAPSHOT-binary.zip
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-examples/openbooks/target/openbooks-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-examples/openbooks/4.1.1-SNAPSHOT/openbooks-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ---------------< org.apache.openjpa:openjpa-integration >---------------
+[INFO] Building OpenJPA Integration Tests 4.1.1-SNAPSHOT                [21/31]
+[INFO]   from openjpa-integration/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980032644
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 2 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration/4.1.1-SNAPSHOT/openjpa-integration-4.1.1-SNAPSHOT.pom
+[INFO] 
+[INFO] ----------< org.apache.openjpa:openjpa-integration-daytrader >----------
+[INFO] Building OpenJPA Integration Tests - Daytrader 4.1.1-SNAPSHOT    [22/31]
+[INFO]   from openjpa-integration/daytrader/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration-daytrader ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration-daytrader ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980032685
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration/daytrader' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration/daytrader
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration-daytrader ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration-daytrader ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration-daytrader ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration-daytrader ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration-daytrader ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-integration-daytrader ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/daytrader/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-integration-daytrader ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration-daytrader ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-integration-daytrader ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/daytrader/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-integration-daytrader ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- dependency:3.8.1:unpack (unpack) @ openjpa-integration-daytrader ---
+[INFO] Configured Artifact: org.apache.openjpa:openjpa-persistence-jdbc:4.1.1-SNAPSHOT:test-jar
+[INFO] 
+[INFO] --- openjpa:4.1.1-SNAPSHOT:test-enhance (enhancer) @ openjpa-integration-daytrader ---
+[INFO] Skip sql execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-integration-daytrader ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-integration-daytrader ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/daytrader/target/openjpa-integration-daytrader-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-integration-daytrader ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/daytrader/target/openjpa-integration-daytrader-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration-daytrader ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration-daytrader ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/daytrader/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-daytrader/4.1.1-SNAPSHOT/openjpa-integration-daytrader-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/daytrader/target/openjpa-integration-daytrader-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-daytrader/4.1.1-SNAPSHOT/openjpa-integration-daytrader-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/daytrader/target/openjpa-integration-daytrader-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-daytrader/4.1.1-SNAPSHOT/openjpa-integration-daytrader-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ----------< org.apache.openjpa:openjpa-integration-examples >-----------
+[INFO] Building OpenJPA Integration Tests - Examples 4.1.1-SNAPSHOT     [23/31]
+[INFO]   from openjpa-integration/examples/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration-examples ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration-examples ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980032811
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration/examples' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration/examples
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration-examples ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration-examples ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration-examples ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration-examples ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration-examples ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration-examples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration-examples ---
+[WARNING] No resources included.
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration-examples ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/examples/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-examples/4.1.1-SNAPSHOT/openjpa-integration-examples-4.1.1-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------< org.apache.openjpa:openjpa-integration-slf4j >------------
+[INFO] Building OpenJPA Integration Tests - SLF4JLogFactory 4.1.1-SNAPSHOT [24/31]
+[INFO]   from openjpa-integration/slf4j/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration-slf4j ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration-slf4j ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980032919
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration/slf4j' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration/slf4j
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration-slf4j ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration-slf4j ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration-slf4j ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration-slf4j ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration-slf4j ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-integration-slf4j ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/slf4j/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-integration-slf4j ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration-slf4j ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-integration-slf4j ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/slf4j/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-integration-slf4j ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- dependency:3.8.1:unpack (unpack) @ openjpa-integration-slf4j ---
+[INFO] Configured Artifact: org.apache.openjpa:openjpa-persistence-jdbc:4.1.1-SNAPSHOT:test-jar
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-integration-slf4j ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-integration-slf4j ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/slf4j/target/openjpa-integration-slf4j-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-integration-slf4j ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/slf4j/target/openjpa-integration-slf4j-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration-slf4j ---
+[WARNING] No resources included.
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration-slf4j ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/slf4j/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-slf4j/4.1.1-SNAPSHOT/openjpa-integration-slf4j-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/slf4j/target/openjpa-integration-slf4j-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-slf4j/4.1.1-SNAPSHOT/openjpa-integration-slf4j-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/slf4j/target/openjpa-integration-slf4j-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-slf4j/4.1.1-SNAPSHOT/openjpa-integration-slf4j-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -------------< org.apache.openjpa:openjpa-integration-tck >-------------
+[INFO] Building OpenJPA Integration Tests - JPA TCK 4.1.1-SNAPSHOT      [25/31]
+[INFO]   from openjpa-integration/tck/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration-tck ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration-tck ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980033054
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration/tck' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration/tck
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration-tck ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration-tck ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration-tck ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration-tck ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration-tck ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration-tck ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration-tck ---
+[WARNING] No resources included.
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration-tck ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/tck/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-tck/4.1.1-SNAPSHOT/openjpa-integration-tck-4.1.1-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------< org.apache.openjpa:openjpa-integration-validation >----------
+[INFO] Building OpenJPA Integration Tests - Bean Validation 4.1.1-SNAPSHOT [26/31]
+[INFO]   from openjpa-integration/validation/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration-validation ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration-validation ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980033101
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration/validation' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration/validation
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration-validation ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration-validation ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration-validation ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration-validation ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration-validation ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-integration-validation ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/validation/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-integration-validation ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration-validation ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-integration-validation ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/validation/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-integration-validation ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- dependency:3.8.1:unpack (unpack) @ openjpa-integration-validation ---
+[INFO] Configured Artifact: org.apache.openjpa:openjpa-persistence-jdbc:4.1.1-SNAPSHOT:test-jar
+[INFO] 
+[INFO] --- antrun:3.1.0:run (default) @ openjpa-integration-validation ---
+[INFO] Skipping Antrun execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-integration-validation ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-integration-validation ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/validation/target/openjpa-integration-validation-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-integration-validation ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/validation/target/openjpa-integration-validation-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration-validation ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration-validation ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/validation/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-validation/4.1.1-SNAPSHOT/openjpa-integration-validation-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/validation/target/openjpa-integration-validation-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-validation/4.1.1-SNAPSHOT/openjpa-integration-validation-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/validation/target/openjpa-integration-validation-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-validation/4.1.1-SNAPSHOT/openjpa-integration-validation-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] -------------< org.apache.openjpa:openjpa-integration-jmx >-------------
+[INFO] Building OpenJPA Integration Tests - JMX Platform MBeans 4.1.1-SNAPSHOT [27/31]
+[INFO]   from openjpa-integration/jmx/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-integration-jmx ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-integration-jmx ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980033265
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-integration/jmx' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-integration/jmx
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-integration-jmx ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-integration-jmx ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-integration-jmx ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-integration-jmx ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-integration-jmx ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-integration-jmx ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/jmx/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-integration-jmx ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-integration-jmx ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-integration-jmx ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-integration/jmx/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-integration-jmx ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- dependency:3.8.1:unpack (unpack) @ openjpa-integration-jmx ---
+[INFO] Configured Artifact: org.apache.openjpa:openjpa-persistence-jdbc:4.1.1-SNAPSHOT:test-jar
+[INFO] 
+[INFO] --- openjpa:4.1.1-SNAPSHOT:test-enhance (enhancer) @ openjpa-integration-jmx ---
+[INFO] Skip sql execution
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-integration-jmx ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-integration-jmx ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/jmx/target/openjpa-integration-jmx-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-integration-jmx ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-integration/jmx/target/openjpa-integration-jmx-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-integration-jmx ---
+[WARNING] No resources included.
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-integration-jmx ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/jmx/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-jmx/4.1.1-SNAPSHOT/openjpa-integration-jmx-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/jmx/target/openjpa-integration-jmx-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-jmx/4.1.1-SNAPSHOT/openjpa-integration-jmx-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-integration/jmx/target/openjpa-integration-jmx-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-integration-jmx/4.1.1-SNAPSHOT/openjpa-integration-jmx-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ------------< org.apache.openjpa:openjpa-fetch-statistics >-------------
+[INFO] Building OpenJPA Fetching Statistic Tool 4.1.1-SNAPSHOT          [28/31]
+[INFO]   from openjpa-tools/openjpa-fetch-statistics/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-fetch-statistics ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-fetch-statistics ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980033425
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-fetch-statistics ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-fetch-statistics ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-fetch-statistics ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-fetch-statistics ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-fetch-statistics ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-fetch-statistics ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-fetch-statistics ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-fetch-statistics ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-fetch-statistics ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-fetch-statistics ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-fetch-statistics ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-fetch-statistics ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics/target/openjpa-fetch-statistics-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-fetch-statistics ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics/target/openjpa-fetch-statistics-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-fetch-statistics ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 3 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-fetch-statistics ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-fetch-statistics/4.1.1-SNAPSHOT/openjpa-fetch-statistics-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics/target/openjpa-fetch-statistics-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-fetch-statistics/4.1.1-SNAPSHOT/openjpa-fetch-statistics-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics/target/openjpa-fetch-statistics-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-fetch-statistics/4.1.1-SNAPSHOT/openjpa-fetch-statistics-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ----------< org.apache.openjpa:openjpa-fetch-statistics-was >-----------
+[INFO] Building OpenJPA Fetching Statistic Tool -- WAS Bundle 4.1.1-SNAPSHOT [29/31]
+[INFO]   from openjpa-tools/openjpa-fetch-statistics-was/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-fetch-statistics-was ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-fetch-statistics-was ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980033665
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-fetch-statistics-was ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-fetch-statistics-was ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-fetch-statistics-was ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-fetch-statistics-was ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-fetch-statistics-was ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-fetch-statistics-was ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-fetch-statistics-was ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-fetch-statistics-was ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-fetch-statistics-was ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-fetch-statistics-was ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-fetch-statistics-was ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-fetch-statistics-was ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/target/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-fetch-statistics-was ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/target/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- shade:3.6.0:shade (default) @ openjpa-fetch-statistics-was ---
+[INFO] Including org.apache.openjpa:openjpa-fetch-statistics:jar:4.1.1-SNAPSHOT in the shaded jar.
+[INFO] Excluding jakarta.transaction:jakarta.transaction-api:jar:2.0.1 from the shaded jar.
+[INFO] Excluding org.apache.openjpa:openjpa-kernel:jar:4.1.1-SNAPSHOT from the shaded jar.
+[INFO] Excluding jakarta.jms:jakarta.jms-api:jar:3.1.0 from the shaded jar.
+[INFO] Excluding org.apache.xbean:xbean-asm9-shaded:jar:4.26 from the shaded jar.
+[INFO] Excluding org.apache.openjpa:openjpa-lib:jar:4.1.1-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.apache.openjpa:openjpa-persistence-jdbc:jar:4.1.1-SNAPSHOT from the shaded jar.
+[INFO] Excluding jakarta.persistence:jakarta.persistence-api:jar:3.1.0 from the shaded jar.
+[INFO] Excluding org.apache.openjpa:openjpa-jdbc:jar:4.1.1-SNAPSHOT from the shaded jar.
+[INFO] Excluding org.apache.openjpa:openjpa-persistence:jar:4.1.1-SNAPSHOT from the shaded jar.
+[INFO] Excluding jakarta.annotation:jakarta.annotation-api:jar:2.1.1 from the shaded jar.
+[INFO] Excluding org.apache.commons:commons-pool2:jar:2.12.1 from the shaded jar.
+[INFO] Dependency-reduced POM written at: /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/dependency-reduced-pom.xml
+[WARNING] openjpa-fetch-statistics-4.1.1-SNAPSHOT.jar, openjpa-fetch-statistics-was-4.1.1-SNAPSHOT.jar define 5 overlapping resources: 
+[WARNING]   - META-INF/DEPENDENCIES
+[WARNING]   - META-INF/LICENSE
+[WARNING]   - META-INF/MANIFEST.MF
+[WARNING]   - META-INF/NOTICE
+[WARNING]   - README.txt
+[WARNING] maven-shade-plugin has detected that some files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the file is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See https://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/target/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT.jar with /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/target/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT-shaded.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-fetch-statistics-was ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 0 license.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-fetch-statistics-was ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/dependency-reduced-pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-fetch-statistics-was/4.1.1-SNAPSHOT/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/target/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-fetch-statistics-was/4.1.1-SNAPSHOT/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-tools/openjpa-fetch-statistics-was/target/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-fetch-statistics-was/4.1.1-SNAPSHOT/openjpa-fetch-statistics-was-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] ----------------< org.apache.openjpa:openjpa-features >-----------------
+[INFO] Building OpenJPA Features 4.1.1-SNAPSHOT                         [30/31]
+[INFO]   from openjpa-features/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-features ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-features ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980033892
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-features' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-features
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-features ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-features ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-features ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-features ---
+[INFO] Skipping org.apache.maven.plugins:maven-checkstyle-plugin:3.6.0:checkstyle report goal
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-features ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- karaf:4.4.6:features-generate-descriptor (compile) @ openjpa-features ---
+[INFO] Generating feature descriptor file /home/denni/isw2/openjpa/openjpa-features/target/feature/feature.xml
+[INFO] ...done!
+[INFO] Attaching features XML
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-features ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- build-helper:3.6.0:attach-artifact (attach-artifacts) @ openjpa-features ---
+[WARNING] artifact org.apache.openjpa:openjpa-features:xml:features:4.1.1-SNAPSHOT already attached, replace previous instance
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-features ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-features ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-features/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-features/4.1.1-SNAPSHOT/openjpa-features-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-features/target/feature/feature.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-features/4.1.1-SNAPSHOT/openjpa-features-4.1.1-SNAPSHOT-features.xml
+[INFO] 
+[INFO] -----------------< org.apache.openjpa:openjpa-junit5 >------------------
+[INFO] Building OpenJPA JUnit 5 4.1.1-SNAPSHOT                          [31/31]
+[INFO]   from openjpa-junit5/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ openjpa-junit5 ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ openjpa-junit5 ---
+[INFO] Storing buildNumber: June 3, 2025 at 9:47 PM at timestamp: 1748980034935
+[INFO] Executing: /bin/sh -c cd '/home/denni/isw2/openjpa/openjpa-junit5' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/denni/isw2/openjpa/openjpa-junit5
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ openjpa-junit5 ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ openjpa-junit5 ---
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (default) @ openjpa-junit5 ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:checkstyle (default) @ openjpa-junit5 ---
+[WARNING] Site model of 'org.apache.openjpa:openjpa-parent:pom:4.1.1-SNAPSHOT' for default locale is still using the old pre-version 2.0.0 model. You MUST migrate to the new model as soon as possible otherwise your build will break in the future!
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.1.0 skin
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[WARNING] Unable to locate Test Source XRef to link to -- DISABLED
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ openjpa-junit5 ---
+[INFO] Preparing remote bundle org.apache.apache.resources:apache-jar-resource-bundle:1.7
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ openjpa-junit5 ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-junit5/src/main/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ openjpa-junit5 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (test-source-compile) @ openjpa-junit5 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ openjpa-junit5 ---
+[INFO] skip non existing resourceDirectory /home/denni/isw2/openjpa/openjpa-junit5/src/test/resources
+[INFO] Copying 3 resources from target/maven-shared-archive-resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ openjpa-junit5 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ openjpa-junit5 ---
+[WARNING]  Parameter 'systemProperties' is deprecated: Use systemPropertyVariables instead.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ openjpa-junit5 ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-junit5/target/openjpa-junit5-4.1.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.4.2:test-jar (attach-tests) @ openjpa-junit5 ---
+[INFO] Building jar: /home/denni/isw2/openjpa/openjpa-junit5/target/openjpa-junit5-4.1.1-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- apache-rat:0.16.1:check (default) @ openjpa-junit5 ---
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 3 licenses.
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ openjpa-junit5 ---
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-junit5/pom.xml to /home/denni/.m2/repository/org/apache/openjpa/openjpa-junit5/4.1.1-SNAPSHOT/openjpa-junit5-4.1.1-SNAPSHOT.pom
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-junit5/target/openjpa-junit5-4.1.1-SNAPSHOT.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-junit5/4.1.1-SNAPSHOT/openjpa-junit5-4.1.1-SNAPSHOT.jar
+[INFO] Installing /home/denni/isw2/openjpa/openjpa-junit5/target/openjpa-junit5-4.1.1-SNAPSHOT-tests.jar to /home/denni/.m2/repository/org/apache/openjpa/openjpa-junit5/4.1.1-SNAPSHOT/openjpa-junit5-4.1.1-SNAPSHOT-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for OpenJPA Parent POM 4.1.1-SNAPSHOT:
+[INFO] 
+[INFO] OpenJPA Parent POM ................................. SUCCESS [  5.571 s]
+[INFO] OpenJPA Utilities Library .......................... SUCCESS [  6.717 s]
+[INFO] OpenJPA Kernel ..................................... SUCCESS [ 10.190 s]
+[INFO] OpenJPA JDBC ....................................... SUCCESS [  6.411 s]
+[INFO] OpenJPA Persistence ................................ SUCCESS [  5.368 s]
+[INFO] OpenJPA Persistence JDBC ........................... SUCCESS [  0.871 s]
+[INFO] OpenJPA Persistence Locking Tests .................. SUCCESS [  0.361 s]
+[INFO] OpenJPA tools ...................................... SUCCESS [  0.090 s]
+[INFO] OpenJPA Maven Plugin ............................... SUCCESS [ 36.230 s]
+[INFO] OpenJPA XML Store .................................. SUCCESS [  0.372 s]
+[INFO] OpenJPA Slice ...................................... SUCCESS [  0.888 s]
+[INFO] OpenJPA JEST ....................................... SUCCESS [  0.765 s]
+[INFO] OpenJPA Kubernetes ................................. SUCCESS [  0.826 s]
+[INFO] OpenJPA Aggregate Jar .............................. SUCCESS [  4.552 s]
+[INFO] OpenJPA Aggregate Jar with Dependencies ............ SUCCESS [  1.045 s]
+[INFO] OpenJPA Project Docs and Assemblies ................ SUCCESS [  2.318 s]
+[INFO] OpenJPA Examples ................................... SUCCESS [  0.386 s]
+[INFO] OpenJPA Examples - Simple .......................... SUCCESS [  0.327 s]
+[INFO] OpenJPA Examples - image-gallery ................... SUCCESS [  0.140 s]
+[INFO] OpenJPA Examples - OpenBooks ....................... SUCCESS [  4.080 s]
+[INFO] OpenJPA Integration Tests .......................... SUCCESS [  0.042 s]
+[INFO] OpenJPA Integration Tests - Daytrader .............. SUCCESS [  0.125 s]
+[INFO] OpenJPA Integration Tests - Examples ............... SUCCESS [  0.107 s]
+[INFO] OpenJPA Integration Tests - SLF4JLogFactory ........ SUCCESS [  0.137 s]
+[INFO] OpenJPA Integration Tests - JPA TCK ................ SUCCESS [  0.045 s]
+[INFO] OpenJPA Integration Tests - Bean Validation ........ SUCCESS [  0.163 s]
+[INFO] OpenJPA Integration Tests - JMX Platform MBeans .... SUCCESS [  0.163 s]
+[INFO] OpenJPA Fetching Statistic Tool .................... SUCCESS [  0.238 s]
+[INFO] OpenJPA Fetching Statistic Tool -- WAS Bundle ...... SUCCESS [  0.206 s]
+[INFO] OpenJPA Features ................................... SUCCESS [  1.052 s]
+[INFO] OpenJPA JUnit 5 .................................... SUCCESS [  0.344 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:30 min
+[INFO] Finished at: 2025-06-03T21:47:15+02:00
+[INFO] ------------------------------------------------------------------------
