@@ -1,4 +1,21 @@
-= Apache OpenJPA - README
+= Dennis CI
+
+Build status below  
+
+
+== Tested classes
+
+
+== Build & Java Environment
+
+- **JDK version**: 21 (OpenJDK)
+- **JRE version**: 21 (OpenJDK)
+- **JVM version**: 21 (OpenJDK)
+- **javac compiler version**: 21.0.7 (OpenJDK)
+- **Maven target/source version**: 8 
+
+
+= Apache OpenJPA - README (Original)
 
 == Preface
 Thank you for downloading this release of Apache OpenJPA.
