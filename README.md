@@ -1,18 +1,18 @@
-
-= Dennis CI
+# Dennis CI
 
 Build status below 
 
-image::https://github.com/Denni-02/openjpa/actions/workflows/denni-ci.yml/badge.svg?branch=testing-project-ISW[Build Status]
+![Build Status](https://github.com/Denni-02/openjpa/actions/workflows/denni-ci.yml/badge.svg?branch=testing-project-ISW)
 
-== Workflow GitHub Actions (CI)
+
+## Workflow GitHub Actions (CI)
 
 Il file del workflow personalizzato usato per il progetto si trova in: **.github/workflows/denni-ci.yml**
 
 
-== Tested classes
+## Tested classes
 
-== Build & Java Environment
+## Build & Java Environment
 - **JDK version**: 11 (OpenJDK)
 - **JRE version**: 11 (OpenJDK)
 - **JVM version**: 11 (OpenJDK)
@@ -21,19 +21,19 @@ Il file del workflow personalizzato usato per il progetto si trova in: **.github
 ---
 
 
-= Apache OpenJPA - README (Original)
+# Apache OpenJPA - README (Original)
 
-== Preface
+## Preface
 Thank you for downloading this release of Apache OpenJPA.
 
 Apache OpenJPA is an implementation of the Jakarta Persistence API 3.0 specification.
 
 
-== License
+## License
 The content of this repository is licensed under Apache License 2.0
 http://www.apache.org/licenses/LICENSE-2.0
 
-== Further Information
+## Further Information
 
 The following files can be found in the openjpa-project subdirectory:
 
@@ -45,13 +45,13 @@ For documentation and project information, please visit our project site:
     http://openjpa.apache.org/
 
 
-== Compiling
+## Compiling
 
 The best way to compile Apache OpenJPA yourself is to run the build against the default derby database.
 
  $> mvn clean install -Dsurefire.excludes.locking=**/*
 
-== Testing against different Databases
+## Testing against different Databases
 
 The Apache OpenJPA project also contains a setup for testing against multiple databases.
 The easiest way is to use Docker.
@@ -60,7 +60,7 @@ The respective database image has to be started manually before starting the bui
 The reason for not starting it as part of the build itself is to be able to look at the database content after the build did run.
 
 [TIP]
-====
+####
 *Hint for running with Podman*
 
 Some distributions switched from native Docker to Podman.
@@ -69,7 +69,7 @@ If you get an error like `missing DOCKER_HOST` then you might try running the fo
   export DOCKER_HOST="unix:/run/user/$(id -u)/podman/podman.sock"
   podman system service -t 3600 &
   mvn ...
-====
+####
 
 To start e.g. a PostgreSQL Docker image you can simply invoke the following command.
 Note the -N Maven option which stands for 'non-recursive'.
