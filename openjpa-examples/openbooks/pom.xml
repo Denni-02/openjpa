@@ -128,7 +128,7 @@
                         <executions>
                             <execution>
                                 <id>genmodel</id>
-                                <phase>process-resources</phase>
+                                <phase>none</phase>
                                 <configuration>
                                     <target>
                                         <echo>Running OpenBooks genmodel</echo>
@@ -218,7 +218,7 @@
                         <executions>
                             <execution>
                                 <id>run</id>
-                                <phase>test</phase>
+                                <phase>none</phase>
                                 <configuration>
                                     <target>
                                         <echo>Launching OpenBooks</echo>
