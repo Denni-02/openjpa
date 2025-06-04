@@ -25,6 +25,9 @@ import static org.junit.Assert.*;
  * Simple sanity test to verify test execution.
  */
 public class SanityTest {
+
+    // Trigger CI
+
     @Test
     public void testOnePlusOne() {
         assertEquals(2, 1 + 1);
