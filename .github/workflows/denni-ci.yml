@@ -4,7 +4,7 @@ on:
   push:
     branches: [ testing-project-ISW ]
   pull_request:
-    branches: [ testing-project-ISW2 ]
+    branches: [ testing-project-ISW ]
 
 jobs:
   build:
