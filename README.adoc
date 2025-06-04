@@ -1,18 +1,22 @@
-= Dennis CI
 
-Build status below  
+= Dennis CI
+Build status below 
+![CI Status](https://github.com/Denni-02/openjpa/actions/workflows/denni-ci.yml/badge.svg?branch=testing-project-ISW)
+
+== Workflow GitHub Actions (CI)
+
+Il file del workflow personalizzato usato per il progetto si trova in: **.github/workflows/denni-ci.yml**
 
 
 == Tested classes
 
-
 == Build & Java Environment
+- **JDK version**: 11 (OpenJDK)
+- **JRE version**: 11 (OpenJDK)
+- **JVM version**: 11 (OpenJDK)
+- **javac compiler version**: 11.0.27 (OpenJDK)
 
-- **JDK version**: 21 (OpenJDK)
-- **JRE version**: 21 (OpenJDK)
-- **JVM version**: 21 (OpenJDK)
-- **javac compiler version**: 21.0.7 (OpenJDK)
-- **Maven target/source version**: 8 
+---
 
 
 = Apache OpenJPA - README (Original)
