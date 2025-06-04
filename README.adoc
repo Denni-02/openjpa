@@ -1,7 +1,9 @@
 
 = Dennis CI
+
 Build status below 
-![CI Status](https://github.com/Denni-02/openjpa/actions/workflows/denni-ci.yml/badge.svg?branch=testing-project-ISW)
+
+image::https://github.com/Denni-02/openjpa/actions/workflows/denni-ci.yml/badge.svg?branch=testing-project-ISW[Build Status]
 
 == Workflow GitHub Actions (CI)
 
