@@ -115,7 +115,7 @@
                 <executions>
                     <execution>
                         <id>enhance</id>
-                        <phase>process-test-classes</phase>
+                        <phase>none</phase>
                         <configuration>
                             <skip>true</skip>
                             <target>
