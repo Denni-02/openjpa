@@ -2,9 +2,9 @@ name: Build OpenJPA Student Tests
 
 on:
   push:
-    branches: [ testing-project-ISW ]
+    branches: [ testing-project-ISW2 ]
   pull_request:
-    branches: [ testing-project-ISW ]
+    branches: [ testing-project-ISW2 ]
 
 jobs:
   build:
