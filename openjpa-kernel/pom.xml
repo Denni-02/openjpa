@@ -33,6 +33,10 @@
     <artifactId>openjpa-kernel</artifactId>
     <packaging>jar</packaging>
     <name>OpenJPA Kernel</name>
+    <!--<properties>
+        <evosuiteVersion>1.0.6</evosuiteVersion>
+        <targetFolder>src/test/evosuite</targetFolder>
+    </properties>-->
     <description>OpenJPA Kernel</description>
 
     <dependencies>
@@ -93,10 +97,53 @@
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-standalone-runtime</artifactId>
+            <version>1.2.0</version> 
+            <scope>test</scope>
+        </dependency>
+    
+
     </dependencies>
 
     <build>
         <plugins>
+
+            <!--<plugin>
+                <groupId>org.evosuite.plugins</groupId>
+                <artifactId>evosuite-maven-plugin</artifactId>
+                <version>${evosuiteVersion}</version>
+                <executions>
+                <execution>
+                    <goals>
+                    <goal>prepare</goal>
+                    </goals>
+                    <phase>process-test-classes</phase>
+                </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                <execution>
+                    <id>add-test-source</id>
+                    <phase>generate-test-sources</phase>
+                    <goals>
+                    <goal>add-test-source</goal>
+                    </goals>
+                    <configuration>
+                    <sources>
+                        <source>${targetFolder}</source>
+                    </sources>
+                    </configuration>
+                </execution>
+                </executions>
+            </plugin>-->
+            
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>javacc-maven-plugin</artifactId>
@@ -183,5 +230,21 @@
             </plugin>
         </plugins>
     </build>
+
+    <!--<pluginRepositories>
+        <pluginRepository>
+        <id>EvoSuite</id>
+        <name>EvoSuite Repository</name>
+        <url>http://www.evosuite.org/m2</url>
+        </pluginRepository>
+    </pluginRepositories>-->
+
+    <repositories>
+        <repository>
+            <id>sonatype-oss-releases</id>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+    
 
 </project>
