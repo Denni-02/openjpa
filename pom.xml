@@ -38,6 +38,10 @@
     <version>4.1.1-SNAPSHOT</version>
 
     <properties>
+
+        <!-- JaCoCo ISW2 -->
+        <sonar.coverage.jacoco.xmlReportPaths>../test-jacoco/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+
         <java.class.version>11</java.class.version>
         <java.testclass.version>11</java.testclass.version>
 
@@ -174,6 +178,7 @@
   </scm>
 
     <modules>
+        <module>jacoco-report</module> <!-- JaCoCo ISW2 -->
         <module>openjpa-lib</module>
         <module>openjpa-kernel</module>
         <module>openjpa-jdbc</module>
@@ -195,6 +200,31 @@
     </modules>
 
     <profiles>
+
+        <profile> <!-- JaCoCo ISW2 -->
+            <id>jacoco-profile</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.10</version>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        
         <!-- ================ -->
         <!--  Build Profiles  -->
         <!-- ================ -->
@@ -214,17 +244,22 @@
             </properties>
             <build>
                 <plugins>
+                    <!--<plugin>  JaCoCo ISW2 
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.11</version>
+                    </plugin>-->
                     <plugin>
                         <groupId>org.apache.rat</groupId>
                         <artifactId>apache-rat-plugin</artifactId>
-                        <executions>
+                        <!--<executions> JaCoCo ISW2 
                             <execution>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>check</goal>
                                 </goals>
                             </execution>
-                        </executions>
+                        </executions>-->
                         <configuration>
                             <excludeSubProjects>false</excludeSubProjects>
                             <numUnapprovedLicenses>0</numUnapprovedLicenses>
@@ -390,12 +425,12 @@
                    <plugin>
                        <groupId>org.apache.maven.plugins</groupId>
                        <artifactId>maven-surefire-plugin</artifactId>
-                       <configuration>
+                       <!--<configuration>
                            <argLine>${surefire.jvm.args}</argLine>
                            <includes>
                                <include />
                            </includes>
-                       </configuration>
+                       </configuration>-->
                    </plugin>
                 </plugins>
             </build>
@@ -1964,15 +1999,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <configuration>
+                    <!--<configuration> JACOCO ISW2
                         <argLine>${surefire.jvm.args}</argLine>
                         <redirectTestOutputToFile>true</redirectTestOutputToFile>
                         <trimStackTrace>false</trimStackTrace>
                         <useSystemClassLoader>true</useSystemClassLoader>
                         <excludes>
-                            <!-- exclude classes that include a $; inner classes
-                                 are not test cases per OpenJPA standards -->
-                            <exclude>org/apache/openjpa/**/*$*.class</exclude>
                         </excludes>
                     <systemProperties>
                         <property>
@@ -2028,7 +2060,7 @@
                             <value>${tests.openjpa.driverDataSource}</value>
                         </property>
                     </systemProperties>
-                    </configuration>
+                    </configuration>-->
                 </plugin>
                 <plugin>
                     <groupId>io.fabric8</groupId>
