@@ -16,20 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package sanity;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+package org.apache.openjpa.util;
 
-/**
- * Simple sanity test to verify test execution.
- */
-public class SanityTest {
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
 
-    // Trigger CI
-
-    @Test
-    public void testOnePlusOne() {
-        assertEquals(2, 1 + 1);
-    }
+@RunWith(Suite.class)
+@Suite.SuiteClasses({ ProxyManagerImpl_RandoopTest.class })
+public class RegressionTest {
 }
+
