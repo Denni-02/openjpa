@@ -119,6 +119,54 @@
     <build>
         <plugins>
 
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.4.11</version> <!-- Compatibile con Java 8 -->
+                <configuration>
+                    <!-- Classi da testare -->
+                    <targetClasses>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl</param>
+                    </targetClasses>
+
+                    <!-- Classi di test da usare -->
+                    <targetTests>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_OtherTest</param>
+                        <param>org.apache.openjpa.util.NewCustomProxyTest</param>
+                        <param>org.apache.openjpa.util.CopyCollectionTest</param>
+                        <param>org.apache.openjpa.util.NewCollectionProxyTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImplZeroShotTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_CoTTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_RandoopTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImplMutationTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_MutationCoTTest</param>
+                    </targetTests>
+
+                    <!-- ESCLUDI test generati da EvoSuite/Randoop -->
+                    <excludedTestClasses>
+                        <param>*.ESTest*</param>
+                        <!--<param>*.Randoop*</param>-->
+                    </excludedTestClasses>
+
+                    <outputFormats>
+                        <param>HTML</param>
+                    </outputFormats>
+
+                    <mutators>
+                        <mutator>ALL</mutator> <!-- Usa tutte le mutazioni standard -->
+                    </mutators>
+
+                    <!-- opzionale: ignora i test instabili -->
+                    <timeoutConst>10000</timeoutConst>
+                    <timeoutFactor>1.5</timeoutFactor>
+                    <jvmArgs>
+                        <param>-Xmx4G</param>
+                    </jvmArgs>
+                    <verbose>true</verbose>
+                </configuration>
+            </plugin>
+
+
             <!--<plugin>
                 <groupId>org.evosuite.plugins</groupId>
                 <artifactId>evosuite-maven-plugin</artifactId>
