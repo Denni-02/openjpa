@@ -126,12 +126,13 @@
                 <configuration>
                     <!-- Classi da testare -->
                     <targetClasses>
-                        <param>org.apache.openjpa.util.ProxyManagerImpl</param>
+                        <!--<param>org.apache.openjpa.util.ProxyManagerImpl</param>-->
+                        <param>org.apache.openjpa.util.CacheMap</param>
                     </targetClasses>
 
                     <!-- Classi di test da usare -->
                     <targetTests>
-                        <param>org.apache.openjpa.util.ProxyManagerImpl_OtherTest</param>
+                        <!--<param>org.apache.openjpa.util.ProxyManagerImpl_OtherTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_NewCustomProxyTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_CopyCollectionTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_NewCollectionProxyTest</param>
@@ -139,12 +140,18 @@
                         <param>org.apache.openjpa.util.ProxyManagerImpl_CoTTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_RandoopTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_MutationTest</param>
-                        <param>org.apache.openjpa.util.ProxyManagerImpl_MutationCoTTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_MutationCoTTest</param>-->
+                        <param>org.apache.openjpa.util.CacheMap_ZeroShotTest</param>
+                        <param>org.apache.openjpa.util.CacheMap_RandoopTest</param>
+                        <param>org.apache.openjpa.util.CacheMap_PutTest</param>
+                        <param>org.apache.openjpa.util.CacheMap_PinTest</param>
+                        <param>org.apache.openjpa.util.CacheMap_ESTest</param>
+                        <param>org.apache.openjpa.util.CacheMap_OtherTest</param>
                     </targetTests>
 
                     <!-- ESCLUDI test generati da EvoSuite/Randoop -->
                     <excludedTestClasses>
-                        <param>*.ESTest*</param>
+                        <!--<param>*.ESTest*</param>-->
                         <!--<param>*.Randoop*</param>-->
                     </excludedTestClasses>
 
