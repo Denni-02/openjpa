@@ -32,7 +32,7 @@ public class ProxyManagerImpl_NewCollectionProxyTest {
         ProxyManagerImpl manager = new ProxyManagerImpl();
         try {
             manager.newCollectionProxy(null, null, null, true);
-            fail("Expected NullPointerException");
+            fail("Ci aspettiamo una NullPointerException");
         } catch (NullPointerException e) {
             // OK
         }
@@ -69,7 +69,7 @@ public class ProxyManagerImpl_NewCollectionProxyTest {
         ProxyManagerImpl manager = new ProxyManagerImpl();
         try {
             manager.newCollectionProxy(String.class, null, null, true);
-            fail("Expected UnsupportedException");
+            fail("Ci aspettiamo UnsupportedException");
         } catch (UnsupportedException e) {
             // OK
         }
@@ -92,7 +92,7 @@ public class ProxyManagerImpl_NewCollectionProxyTest {
         Collection proxy = (Collection) manager.newCollectionProxy(ArrayList.class, Integer.class, null, true);
         try {
             proxy.add("foo");
-            fail("Expected ClassCastException");
+            fail("Ci aspettiamo ClassCastException");
         } catch (ClassCastException e) {
             // OK
         }
@@ -151,7 +151,7 @@ public class ProxyManagerImpl_NewCollectionProxyTest {
         Collection proxy = (Collection) manager.newCollectionProxy(TreeSet.class, null, Comparator.naturalOrder(), true);
         try {
             proxy.add(new NonComparable());
-            fail("Expected ClassCastException");
+            fail("Ci aspettiamo ClassCastException");
         } catch (ClassCastException e) {
             // OK
         }

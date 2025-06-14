@@ -32,7 +32,7 @@ public class ProxyManagerImpl_CopyCollectionTest {
         ProxyManagerImpl manager = new ProxyManagerImpl();
         try {
             manager.copyCollection(null);
-            fail("Expected NullPointerException");
+            fail("Ci aspettiamo una NullPointerException");
         } catch (NullPointerException e) {
             // OK
         }
@@ -44,7 +44,7 @@ public class ProxyManagerImpl_CopyCollectionTest {
     public void test_copyNull_returnsNull() {
         ProxyManagerImpl manager = new ProxyManagerImpl();
         Collection result = manager.copyCollection(null);
-        assertNull("Expected null to be returned when input is null", result);
+        assertNull("Ci aspettiamo null quando l'input è null", result);
     }
 
     // T11: orig vuota → collezione vuota copiata
