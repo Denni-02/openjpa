@@ -19,11 +19,6 @@
 
 package org.apache.openjpa.util;
 
-import org.apache.openjpa.util.proxy.ProxyCalendar;
-import org.apache.openjpa.util.proxy.ProxyCollection;
-import org.apache.openjpa.util.proxy.ProxyDate;
-import org.apache.openjpa.util.proxy.ProxyMap;
-import org.apache.openjpa.util.proxy.ProxyBean;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,7 +26,7 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-public class ProxyManagerImplZeroShotTest {
+public class ProxyManagerImpl_ZeroShotTest {
 
     private ProxyManagerImpl proxyManager;
 

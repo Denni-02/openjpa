@@ -24,7 +24,7 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-public class NewCustomProxyTest {
+public class ProxyManagerImpl_NewCustomProxyTest {
 
     private final ProxyManagerImpl proxyManager = new ProxyManagerImpl();
 

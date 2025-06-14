@@ -24,6 +24,6 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ ProxyManagerImpl_RandoopTest.class })
-public class RegressionTest {
+public class ProxyManagerImpl_RegressionTest {
 }
 

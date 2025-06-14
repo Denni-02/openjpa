@@ -24,7 +24,7 @@ import static org.junit.Assert.*;
 import java.util.*;
 
 
-public class NewCollectionProxyTest {
+public class ProxyManagerImpl_NewCollectionProxyTest {
 
     // T1: null, null, null, true → NullPointerException
     @Test

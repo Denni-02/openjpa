@@ -132,13 +132,13 @@
                     <!-- Classi di test da usare -->
                     <targetTests>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_OtherTest</param>
-                        <param>org.apache.openjpa.util.NewCustomProxyTest</param>
-                        <param>org.apache.openjpa.util.CopyCollectionTest</param>
-                        <param>org.apache.openjpa.util.NewCollectionProxyTest</param>
-                        <param>org.apache.openjpa.util.ProxyManagerImplZeroShotTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_NewCustomProxyTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_CopyCollectionTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_NewCollectionProxyTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_ZeroShotTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_CoTTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_RandoopTest</param>
-                        <param>org.apache.openjpa.util.ProxyManagerImplMutationTest</param>
+                        <param>org.apache.openjpa.util.ProxyManagerImpl_MutationTest</param>
                         <param>org.apache.openjpa.util.ProxyManagerImpl_MutationCoTTest</param>
                     </targetTests>
 

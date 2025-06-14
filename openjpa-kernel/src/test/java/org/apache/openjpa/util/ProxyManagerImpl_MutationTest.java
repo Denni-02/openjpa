@@ -27,7 +27,7 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-public class ProxyManagerImplMutationTest {
+public class ProxyManagerImpl_MutationTest {
 
     private ProxyManagerImpl proxyManager;
 
