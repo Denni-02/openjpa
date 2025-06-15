@@ -147,6 +147,7 @@
                         <param>org.apache.openjpa.util.CacheMap_PinTest</param>
                         <param>org.apache.openjpa.util.CacheMap_ESTest</param>
                         <param>org.apache.openjpa.util.CacheMap_OtherTest</param>
+                        <param>org.apache.openjpa.util.CacheMap_MutationTest</param>
                     </targetTests>
 
                     <!-- ESCLUDI test generati da EvoSuite/Randoop -->
